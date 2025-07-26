@@ -1,9 +1,12 @@
+using _project.Scripts.LeoECS.Components.Input;
 using _project.Scripts.LeoECS.Services;
 using _project.Scripts.LeoECS.Systems;
+using _project.Scripts.LeoECS.Systems.Input;
 using _project.Scripts.LeoECS.Systems.Player;
 using AB_Utility.FromSceneToEntityConverter;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
+using Leopotam.EcsLite.ExtendedSystems;
 using UnityEngine;
 
 namespace _project.Scripts.LeoECS
@@ -22,13 +25,17 @@ namespace _project.Scripts.LeoECS
             _systems
                 .Add(new TimeSystem())
                 // ===== Init    
+                .Add(new InputInitSystem())
                 .Add(new PlayerInitSystem())
                 // ===== Input    
+                .Add(new InputMouseSystem())
                 .Add(new PlayerMoveInputSystem())
                 // ===== Move    
                 .Add(new MoveDirectionSystem())
                 // ===== Animations    
                 .Add(new MoveFlipAnimationSystem())
+                .Add(new AnimationSystem())
+
                 .ConvertScene()
                 .Inject((ITimeService) new TimeService())
                 .Init();

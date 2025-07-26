@@ -1,4 +1,5 @@
 using _project.Scripts.LeoECS.Components;
+using _project.Scripts.LeoECS.Components.Tags;
 using _project.Scripts.LeoECS.Services;
 using LeoECS.Extensions;
 using Leopotam.EcsLite;
