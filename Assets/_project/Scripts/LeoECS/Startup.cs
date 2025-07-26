@@ -1,30 +1,57 @@
+using _project.Scripts.LeoECS.Services;
+using _project.Scripts.LeoECS.Systems;
+using _project.Scripts.LeoECS.Systems.Player;
+using AB_Utility.FromSceneToEntityConverter;
 using Leopotam.EcsLite;
+using Leopotam.EcsLite.Di;
 using UnityEngine;
 
-class Startup : MonoBehaviour {
-    EcsWorld _world;
-    IEcsSystems _systems;
+namespace _project.Scripts.LeoECS
+{
+    class Startup : MonoBehaviour
+    {
+        [SerializeField] private SharedData _sharedData;
 
-    void Start () {
-        _world = new EcsWorld ();
-        _systems = new EcsSystems (_world);
-        _systems
-            // .Add ()
-            .Init ();
-    }
-    
-    void Update () {
-        _systems?.Run ();
-    }
+        EcsWorld _world;
+        IEcsSystems _systems;
 
-    void OnDestroy () {
-        if (_systems != null) {
-            _systems.Destroy ();
-            _systems = null;
+        void Start()
+        {
+            _world = new EcsWorld();
+            _systems = new EcsSystems(_world, _sharedData);
+            _systems
+                .Add(new TimeSystem())
+                // ===== Init    
+                .Add(new PlayerInitSystem())
+                // ===== Input    
+                .Add(new PlayerMoveInputSystem())
+                // ===== Move    
+                .Add(new MoveDirectionSystem())
+                // ===== Animations    
+                .Add(new MoveFlipAnimationSystem())
+                .ConvertScene()
+                .Inject((ITimeService) new TimeService())
+                .Init();
         }
-        if (_world != null) {
-            _world.Destroy ();
-            _world = null;
+
+        void Update()
+        {
+            _systems?.Run();
+        }
+
+        void OnDestroy()
+        {
+            if (_systems != null)
+            {
+                _systems.Destroy();
+                _systems = null;
+            }
+
+            if (_world != null)
+            {
+                _world.Destroy();
+                _world = null;
+            }
         }
     }
 }
