@@ -11,6 +11,7 @@ namespace _project.Scripts.LeoECS.Systems.Player
         private readonly EcsFilterInject<Inc<PlayerTag>> _playerFilter;
 
         private readonly EcsPoolInject<MoveDirectionComponent> _moveDirectionPool;
+        private readonly EcsPoolInject<EcsMonoObjectComponent> _ecsMonoObjectPool;
 
         private readonly EcsSharedInject<SharedData> _shared;
 
@@ -18,6 +19,7 @@ namespace _project.Scripts.LeoECS.Systems.Player
         {
             _playerFilter.TryGetSingleEntity(out var entity);
 
+            _ecsMonoObjectPool.Value.Get(entity).EcsMonoObject.Init(entity, systems.GetWorld());
             _moveDirectionPool.Value.Add(entity).MoveSpeed = _shared.Value.PlayerConfig.MoveSpeed;
         }
     }

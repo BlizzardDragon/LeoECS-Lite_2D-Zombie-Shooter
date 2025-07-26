@@ -1,3 +1,4 @@
+using _project.Scripts.LeoECS.Components.Events;
 using _project.Scripts.LeoECS.Components.Input;
 using _project.Scripts.LeoECS.Services;
 using _project.Scripts.LeoECS.Systems;
@@ -30,12 +31,15 @@ namespace _project.Scripts.LeoECS
                 // ===== Input    
                 .Add(new InputMouseSystem())
                 .Add(new PlayerMoveInputSystem())
+                // ===== BulletSpawn
+                .Add(new BulletSpawnSystem())
                 // ===== Move    
                 .Add(new MoveDirectionSystem())
                 // ===== Animations    
                 .Add(new MoveFlipAnimationSystem())
                 .Add(new AnimationSystem())
 
+                .DelHere<ShootAnimationEvent>()
                 .ConvertScene()
                 .Inject((ITimeService) new TimeService())
                 .Init();

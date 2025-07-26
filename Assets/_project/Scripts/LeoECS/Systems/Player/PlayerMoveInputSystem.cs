@@ -14,8 +14,15 @@ namespace _project.Scripts.LeoECS.Systems.Player
         {
             _playerFilter.TryGetSingleEntity(out var entity);
 
-            var direction = UnityEngine.Input.GetAxisRaw("Horizontal");
-            _playerFilter.Pools.Inc2.Get(entity).MoveDirection = (int) direction;
+            var direction = (int) UnityEngine.Input.GetAxisRaw("Horizontal");
+
+            ref var moveDirectionComponent = ref _playerFilter.Pools.Inc2.Get(entity);
+            moveDirectionComponent.MoveDirection = direction;
+
+            if (direction != 0)
+            {
+                moveDirectionComponent.LastMoveDirection = direction;
+            }
         }
     }
 }

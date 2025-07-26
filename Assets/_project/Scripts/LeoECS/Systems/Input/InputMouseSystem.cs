@@ -18,11 +18,17 @@ namespace _project.Scripts.LeoECS.Systems.Input
 
             if (UnityEngine.Input.GetMouseButtonDown(0))
             {
-                _lmbHoldPool.Value.Add(entity);
+                if (!_lmbHoldPool.Value.Has(entity))
+                {
+                    _lmbHoldPool.Value.Add(entity);
+                }
             }
             else if (UnityEngine.Input.GetMouseButtonUp(0))
             {
-                _lmbHoldPool.Value.Del(entity);
+                if (_lmbHoldPool.Value.Has(entity))
+                {
+                    _lmbHoldPool.Value.Del(entity);
+                }
             }
         }
     }

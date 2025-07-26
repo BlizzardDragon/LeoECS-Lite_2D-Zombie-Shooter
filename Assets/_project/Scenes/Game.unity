@@ -2311,6 +2311,7 @@ Transform:
   m_Children:
   - {fileID: 1625099434}
   - {fileID: 60694759}
+  - {fileID: 1513217494}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &414790241
@@ -3368,7 +3369,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3393,7 +3394,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 8.56, z: -10}
+  m_LocalPosition: {x: 0, y: 6.42, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8189,6 +8190,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4178723333563650678, guid: 797c52514204c5d4f98d57b019d73afd, type: 3}
   m_PrefabInstance: {fileID: 1507632960}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1513217493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1513217494}
+  m_Layer: 0
+  m_Name: Containers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1513217494
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513217493}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1553773245}
+  m_Father: {fileID: 407880768}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1519307448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8506,6 +8539,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4178723333563650678, guid: 797c52514204c5d4f98d57b019d73afd, type: 3}
   m_PrefabInstance: {fileID: 1540065946}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1553773244
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1553773245}
+  m_Layer: 0
+  m_Name: BulletContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1553773245
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553773244}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1513217494}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1555599577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10822,7 +10886,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sharedData:
+    <BulletContainer>k__BackingField: {fileID: 1553773245}
     <PlayerConfig>k__BackingField: {fileID: 11400000, guid: e879798fbfe360d419f438981cd29359, type: 2}
+    <BulletConfig>k__BackingField: {fileID: 11400000, guid: c9bf5f7b8176d124a9200771689e648c, type: 2}
 --- !u!1001 &1790108164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12688,7 +12754,7 @@ Transform:
   m_GameObject: {fileID: 2045351955}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 8.56, z: -10}
+  m_LocalPosition: {x: 0, y: 6.42, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12712,7 +12778,7 @@ MonoBehaviour:
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
-  FollowOffset: {x: 0, y: 8.56, z: -10}
+  FollowOffset: {x: 0, y: 6.42, z: -10}
 --- !u!114 &2045351958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12738,7 +12804,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 40
-    OrthographicSize: 10
+    OrthographicSize: 8
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0

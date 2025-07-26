@@ -1,7 +1,5 @@
 using _project.Scripts.LeoECS.Components;
-using _project.Scripts.LeoECS.Components.Tags;
 using _project.Scripts.LeoECS.Services;
-using LeoECS.Extensions;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
 using UnityEngine;
@@ -10,21 +8,26 @@ namespace _project.Scripts.LeoECS.Systems
 {
     public class MoveDirectionSystem : IEcsRunSystem
     {
-        private readonly EcsFilterInject<Inc<PlayerTag, MoveDirectionComponent, TransformComponent>> _playerFilter;
+        private readonly EcsFilterInject<Inc<MoveDirectionComponent, TransformComponent>> _moveFilter;
 
         private readonly EcsCustomInject<ITimeService> _timeService;
 
         public void Run(IEcsSystems systems)
         {
-            if (!_playerFilter.TryGetSingleEntity(out var entity)) return;
+            var entities = _moveFilter.Value.GetRawEntities();
+            var count = _moveFilter.Value.GetEntitiesCount();
 
-            ref var transformComponent = ref _playerFilter.Pools.Inc3.Get(entity);
-            ref var moveDirectionComponent = ref _playerFilter.Pools.Inc2.Get(entity);
+            for (int i = 0; i < count; i++)
+            {
+                var entity = entities[i];
+                ref var moveDirComponent = ref _moveFilter.Pools.Inc1.Get(entity);
+                ref var transformComponent = ref _moveFilter.Pools.Inc2.Get(entity);
 
-            var directionX =
-                moveDirectionComponent.MoveDirection * moveDirectionComponent.MoveSpeed * _timeService.Value.DeltaTime;
+                var xDirection =
+                    moveDirComponent.MoveDirection * moveDirComponent.MoveSpeed * _timeService.Value.DeltaTime;
 
-            transformComponent.Transform.Translate(new Vector3(directionX, 0, 0));
+                transformComponent.Transform.Translate(new Vector3(xDirection, 0, 0));
+            }
         }
     }
 }
