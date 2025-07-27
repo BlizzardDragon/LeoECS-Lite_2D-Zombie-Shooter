@@ -1,3 +1,4 @@
+using _project.Scripts.LeoECS.Components;
 using _project.Scripts.LeoECS.Components.Events;
 using _project.Scripts.LeoECS.Components.Input;
 using _project.Scripts.LeoECS.Services;
@@ -31,15 +32,22 @@ namespace _project.Scripts.LeoECS
                 // ===== Input    
                 .Add(new InputMouseSystem())
                 .Add(new PlayerMoveInputSystem())
-                // ===== BulletSpawn
-                .Add(new BulletSpawnSystem())
                 // ===== Move    
+                .Add(new TargetFollowSystem())
                 .Add(new MoveDirectionSystem())
+                // ===== Spawn    
+                .Add(new BulletSpawnSystem())
+                .Add(new EnemySpawnSystem())
                 // ===== Animations    
                 .Add(new MoveFlipAnimationSystem())
                 .Add(new AnimationSystem())
-
+                // ===== DeleteEvents    
                 .DelHere<ShootAnimationEvent>()
+                .DelHere<TriggerEnterEntityEvent>()
+#if UNITY_EDITOR
+                .Add(new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem())
+                .Add(new Leopotam.EcsLite.UnityEditor.EcsSystemsDebugSystem())
+#endif
                 .ConvertScene()
                 .Inject((ITimeService) new TimeService())
                 .Init();

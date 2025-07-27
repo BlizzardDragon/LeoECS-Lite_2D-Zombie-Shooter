@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcc770cba8e844fb84c2d6091a05cdfd, type: 3}
-  m_Name: BulletConfig
+  m_Script: {fileID: 11500000, guid: 7ba706438c804cf09fb713f5623b0b7f, type: 3}
+  m_Name: EnemySpawnConfig
   m_EditorClassIdentifier: 
-  <Prefab>k__BackingField: {fileID: 5793418564874707203, guid: 1b4c89155ae44304593e6b4fd75a8caa, type: 3}
-  <MoveSpeed>k__BackingField: 30
+  <SpawnPeriod>k__BackingField: 5
+  <SpawnDistance>k__BackingField: 15

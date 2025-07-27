@@ -336,42 +336,42 @@ TextureImporter:
       name: zombi_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 546
-        width: 137
-        height: 129
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5
+        y: 547
+        width: 67
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 606b61ce921d87a60800000000000000
-      internalID: 7672111943210415622
+      spriteID: 2ed8f67ea56751f4caa1b5c8c7bdec6c
+      internalID: -365220384
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zombi_1
+      name: zombi_111
       rect:
         serializedVersion: 2
-        x: 9
-        y: 419
-        width: 69
-        height: 129
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 10
+        y: 420
+        width: 67
+        height: 127
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c14b75f54965dcf70800000000000000
-      internalID: 9209112008297264156
+      spriteID: 978858a24aa280d458785a81e8d6f154
+      internalID: -1047943962
       vertices: []
       indices: 
       edges: []
@@ -380,20 +380,20 @@ TextureImporter:
       name: zombi_2
       rect:
         serializedVersion: 2
-        x: 80
-        y: 419
-        width: 69
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 142
+        y: 547
+        width: 70
+        height: 125
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ce8f13dbdaad04c30800000000000000
-      internalID: 4341710480523524332
+      spriteID: 730f1aafb7e30ca4685dca67dff52a89
+      internalID: 941110915
       vertices: []
       indices: 
       edges: []
@@ -402,20 +402,20 @@ TextureImporter:
       name: zombi_3
       rect:
         serializedVersion: 2
-        x: 141
-        y: 546
-        width: 72
-        height: 127
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 216
+        y: 547
+        width: 70
+        height: 123
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d4568749f1a767a30800000000000000
-      internalID: 4212688777505170765
+      spriteID: e4c2f84d703dc844c806203d0fc94171
+      internalID: 135448333
       vertices: []
       indices: 
       edges: []
@@ -424,20 +424,20 @@ TextureImporter:
       name: zombi_4
       rect:
         serializedVersion: 2
-        x: 215
-        y: 546
-        width: 72
-        height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 285
+        y: 547
+        width: 77
+        height: 124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 32f4c89dc4b4ad3a0800000000000000
-      internalID: -6639911907164926173
+      spriteID: 3145a82595a4e7b43b0fbe443558fd34
+      internalID: -1916652430
       vertices: []
       indices: 
       edges: []
@@ -446,20 +446,20 @@ TextureImporter:
       name: zombi_5
       rect:
         serializedVersion: 2
-        x: 284
-        y: 546
-        width: 79
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 370
+        y: 547
+        width: 67
+        height: 124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b800c1ad76fd74150800000000000000
-      internalID: 5856895477552513163
+      spriteID: 2bb1b183d2c9cc14aa3e4e9ea2aa1d08
+      internalID: -402097609
       vertices: []
       indices: 
       edges: []
@@ -468,20 +468,20 @@ TextureImporter:
       name: zombi_6
       rect:
         serializedVersion: 2
-        x: 369
-        y: 546
-        width: 69
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 444
+        y: 547
+        width: 68
+        height: 124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 79ae348c0a907ac20800000000000000
-      internalID: 3217551044938820247
+      spriteID: 4777822f83288f44484c86ad32853a38
+      internalID: 58998187
       vertices: []
       indices: 
       edges: []
@@ -490,20 +490,42 @@ TextureImporter:
       name: zombi_7
       rect:
         serializedVersion: 2
-        x: 370
-        y: 419
-        width: 67
+        x: 514
+        y: 547
+        width: 70
         height: 127
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: af6ea89eec75f1010800000000000000
-      internalID: 1161743775077951226
+      spriteID: 98249fb4e6cf3834486115f8ed8428aa
+      internalID: -801814847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zombi_800
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 420
+        width: 68
+        height: 127
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c039c66f51429dd45828b608205b1fbe
+      internalID: 1921004082
       vertices: []
       indices: 
       edges: []
@@ -512,20 +534,42 @@ TextureImporter:
       name: zombi_8
       rect:
         serializedVersion: 2
-        x: 442
-        y: 419
-        width: 68
-        height: 127
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 586
+        y: 547
+        width: 74
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7d35b5a3c16cb3fa0800000000000000
-      internalID: -5819840268905786409
+      spriteID: ffc533bb131624646bb50d70f129ceab
+      internalID: -1457876253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zombi_1000
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 420
+        width: 73
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5079b0b406416f94c9b605ae11d53a40
+      internalID: -762561812
       vertices: []
       indices: 
       edges: []
@@ -534,20 +578,20 @@ TextureImporter:
       name: zombi_9
       rect:
         serializedVersion: 2
-        x: 443
-        y: 546
-        width: 70
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 663
+        y: 547
+        width: 72
+        height: 125
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0ad214076438dac00800000000000000
-      internalID: 913530637980347808
+      spriteID: 62ddcbe88cc4768449dc2df10831717b
+      internalID: 669044402
       vertices: []
       indices: 
       edges: []
@@ -556,20 +600,20 @@ TextureImporter:
       name: zombi_10
       rect:
         serializedVersion: 2
-        x: 513
-        y: 546
-        width: 72
-        height: 129
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 736
+        y: 547
+        width: 74
+        height: 125
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e41fd2fb8b8097570800000000000000
-      internalID: 8464806564194021710
+      spriteID: 3c5cfc1e67d2da945b2f5d3b13a546cc
+      internalID: 1540730873
       vertices: []
       indices: 
       edges: []
@@ -578,20 +622,20 @@ TextureImporter:
       name: zombi_11
       rect:
         serializedVersion: 2
-        x: 521
-        y: 419
-        width: 70
-        height: 129
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 814
+        y: 547
+        width: 73
+        height: 125
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9cf289c7ad0338f20800000000000000
-      internalID: 3423633856683061193
+      spriteID: 6b76a26d8b1ee3649ab966121bcef1d5
+      internalID: 1412991754
       vertices: []
       indices: 
       edges: []
@@ -600,20 +644,20 @@ TextureImporter:
       name: zombi_12
       rect:
         serializedVersion: 2
-        x: 585
-        y: 546
+        x: 886
+        y: 547
         width: 76
-        height: 129
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: de3d13d11eb178df0800000000000000
-      internalID: -178143006586448915
+      spriteID: 6a28098b45121c44eab1d1180a90d100
+      internalID: 694163212
       vertices: []
       indices: 
       edges: []
@@ -622,64 +666,20 @@ TextureImporter:
       name: zombi_13
       rect:
         serializedVersion: 2
-        x: 593
-        y: 419
-        width: 75
-        height: 130
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 964
+        y: 547
+        width: 70
+        height: 125
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 808d85b2a11877cf0800000000000000
-      internalID: -254592904526768120
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: zombi_14
-      rect:
-        serializedVersion: 2
-        x: 662
-        y: 546
-        width: 74
-        height: 127
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c02f19075f60d4cb0800000000000000
-      internalID: -4878235170147012084
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: zombi_15
-      rect:
-        serializedVersion: 2
-        x: 670
-        y: 419
-        width: 71
-        height: 127
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b5c68daf2b806d490800000000000000
-      internalID: -7721974946274448293
+      spriteID: a12782aac02daa34c99abf2b6153bb92
+      internalID: 765228676
       vertices: []
       indices: 
       edges: []
@@ -688,20 +688,20 @@ TextureImporter:
       name: zombi_16
       rect:
         serializedVersion: 2
-        x: 735
-        y: 546
-        width: 76
-        height: 127
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 81
+        y: 420
+        width: 67
+        height: 126
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0c36ca5112cd39960800000000000000
-      internalID: 7607666230214550464
+      spriteID: 5b0e22afb7433654eb57557111391714
+      internalID: 1004467677
       vertices: []
       indices: 
       edges: []
@@ -710,20 +710,20 @@ TextureImporter:
       name: zombi_17
       rect:
         serializedVersion: 2
-        x: 740
-        y: 419
-        width: 73
-        height: 127
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 150
+        y: 420
+        width: 68
+        height: 124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 48603ba24bfed60d0800000000000000
-      internalID: -3427820184269551996
+      spriteID: 6a8252f782cfcc445b0e207d98c39d94
+      internalID: -1240577802
       vertices: []
       indices: 
       edges: []
@@ -732,20 +732,20 @@ TextureImporter:
       name: zombi_18
       rect:
         serializedVersion: 2
-        x: 813
-        y: 546
-        width: 75
-        height: 127
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 221
+        y: 420
+        width: 69
+        height: 123
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 865eac75f16c89f50800000000000000
-      internalID: 6888473467982374248
+      spriteID: 0019a54d67fa1294fa0ac8adedc2c98a
+      internalID: -447073981
       vertices: []
       indices: 
       edges: []
@@ -754,20 +754,20 @@ TextureImporter:
       name: zombi_19
       rect:
         serializedVersion: 2
-        x: 885
-        y: 546
-        width: 78
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 290
+        y: 420
+        width: 74
+        height: 123
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: aa462b0cd0a3b4490800000000000000
-      internalID: -7761045702101015382
+      spriteID: 963f3f01e031e014293749f2e678ff5d
+      internalID: 391750983
       vertices: []
       indices: 
       edges: []
@@ -776,20 +776,20 @@ TextureImporter:
       name: zombi_20
       rect:
         serializedVersion: 2
-        x: 963
-        y: 546
-        width: 212
-        height: 127
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 371
+        y: 420
+        width: 65
+        height: 125
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a23fdc382bdd43850800000000000000
-      internalID: 6355948732911842090
+      spriteID: 558b4211118465f43808313d0cb536b2
+      internalID: -1397957593
       vertices: []
       indices: 
       edges: []
@@ -798,20 +798,20 @@ TextureImporter:
       name: zombi_21
       rect:
         serializedVersion: 2
-        x: 1105
-        y: 419
-        width: 69
-        height: 127
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 443
+        y: 420
+        width: 66
+        height: 125
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 600c4f8284d400310800000000000000
-      internalID: 1369179259040743430
+      spriteID: a977f84450e853646b37578c2bdf7372
+      internalID: -147589109
       vertices: []
       indices: 
       edges: []
@@ -820,20 +820,20 @@ TextureImporter:
       name: zombi_22
       rect:
         serializedVersion: 2
-        x: 149
-        y: 419
-        width: 70
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 671
+        y: 420
+        width: 69
+        height: 125
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7e986b47df0ad9610800000000000000
-      internalID: 1629635650623277543
+      spriteID: 90d537881391bd244b7184b112b0c05d
+      internalID: -1952219295
       vertices: []
       indices: 
       edges: []
@@ -842,20 +842,20 @@ TextureImporter:
       name: zombi_23
       rect:
         serializedVersion: 2
-        x: 220
-        y: 419
+        x: 741
+        y: 420
         width: 71
         height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 62c71626fe4ff78a0800000000000000
-      internalID: -6305051644310488026
+      spriteID: e76c47dea29b9cd47af9bf3ec88401a5
+      internalID: 1571893299
       vertices: []
       indices: 
       edges: []
@@ -864,20 +864,20 @@ TextureImporter:
       name: zombi_24
       rect:
         serializedVersion: 2
-        x: 289
-        y: 419
-        width: 76
-        height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 815
+        y: 420
+        width: 69
+        height: 124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b689292962ca5b810800000000000000
-      internalID: 1780518509362714731
+      spriteID: 65befcab8af567e40b38a2127c755d36
+      internalID: -1732348495
       vertices: []
       indices: 
       edges: []
@@ -886,20 +886,20 @@ TextureImporter:
       name: zombi_25
       rect:
         serializedVersion: 2
-        x: 814
-        y: 419
-        width: 71
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 884
+        y: 420
+        width: 73
+        height: 121
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 28240f987612026c0800000000000000
-      internalID: -4170296526365506942
+      spriteID: f2a3febc76ca5f542ad03cbee98f0477
+      internalID: -230087296
       vertices: []
       indices: 
       edges: []
@@ -908,20 +908,20 @@ TextureImporter:
       name: zombi_26
       rect:
         serializedVersion: 2
-        x: 883
-        y: 419
-        width: 75
-        height: 123
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 966
+        y: 420
+        width: 68
+        height: 124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0e25f3c73a62b7520800000000000000
-      internalID: 2700794885144793824
+      spriteID: c828204bb05a7cb4a884396a786e6428
+      internalID: 322408106
       vertices: []
       indices: 
       edges: []
@@ -930,20 +930,20 @@ TextureImporter:
       name: zombi_27
       rect:
         serializedVersion: 2
-        x: 965
-        y: 419
-        width: 70
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1037
+        y: 420
+        width: 68
+        height: 122
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: dfb0e5267f87af910800000000000000
-      internalID: 1871941599028448253
+      spriteID: adf3e009f1b2d95409cff878b5560a59
+      internalID: -1385309762
       vertices: []
       indices: 
       edges: []
@@ -952,20 +952,20 @@ TextureImporter:
       name: zombi_28
       rect:
         serializedVersion: 2
-        x: 1036
-        y: 419
-        width: 70
-        height: 124
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1106
+        y: 420
+        width: 67
+        height: 125
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f6be3fdfeaf773a40800000000000000
-      internalID: 5347883472087411567
+      spriteID: 3859bafdae89b8446953af186cd93433
+      internalID: 1070720309
       vertices: []
       indices: 
       edges: []
@@ -974,20 +974,20 @@ TextureImporter:
       name: zombi_29
       rect:
         serializedVersion: 2
-        x: 14
-        y: 278
-        width: 69
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 15
+        y: 279
+        width: 67
+        height: 126
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2df1c434f37c65700800000000000000
-      internalID: 528829080788541394
+      spriteID: 41cf76b304ab4ec4f9b005e0411e9037
+      internalID: -1840155525
       vertices: []
       indices: 
       edges: []
@@ -996,20 +996,20 @@ TextureImporter:
       name: zombi_30
       rect:
         serializedVersion: 2
-        x: 84
-        y: 278
-        width: 69
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 85
+        y: 279
+        width: 67
+        height: 126
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4f3b40943dd7718d0800000000000000
-      internalID: -2875691490636155916
+      spriteID: d78aeee36ad9f5842a2b4959fc538086
+      internalID: 182934098
       vertices: []
       indices: 
       edges: []
@@ -1018,20 +1018,20 @@ TextureImporter:
       name: zombi_31
       rect:
         serializedVersion: 2
-        x: 154
-        y: 278
-        width: 71
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 155
+        y: 279
+        width: 69
+        height: 126
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 68eb22fa8d698b620800000000000000
-      internalID: 2790145826551414406
+      spriteID: eba809f382f710b4f97663c8624ec294
+      internalID: -758332877
       vertices: []
       indices: 
       edges: []
@@ -1040,20 +1040,20 @@ TextureImporter:
       name: zombi_32
       rect:
         serializedVersion: 2
-        x: 227
-        y: 278
-        width: 71
-        height: 124
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 228
+        y: 279
+        width: 69
+        height: 122
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7c23af891888856e0800000000000000
-      internalID: -1848577556836896057
+      spriteID: a7b6cb2de29ade34fb6f228e0ccb4fe3
+      internalID: 1546986999
       vertices: []
       indices: 
       edges: []
@@ -1062,20 +1062,20 @@ TextureImporter:
       name: zombi_33
       rect:
         serializedVersion: 2
-        x: 296
-        y: 278
-        width: 76
-        height: 123
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 297
+        y: 279
+        width: 74
+        height: 121
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7ec1cd51d186124a0800000000000000
-      internalID: -6619895503127831321
+      spriteID: fe54fa80414743f42947bb18eb4493ac
+      internalID: 1757307067
       vertices: []
       indices: 
       edges: []
@@ -1084,20 +1084,20 @@ TextureImporter:
       name: zombi_34
       rect:
         serializedVersion: 2
-        x: 377
-        y: 278
-        width: 65
-        height: 120
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 378
+        y: 279
+        width: 63
+        height: 118
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 94241b2eb71d4c830800000000000000
-      internalID: 4090624691573703241
+      spriteID: abea2dd44e29b0d42b445155d5c10bc8
+      internalID: 841515105
       vertices: []
       indices: 
       edges: []
@@ -1106,20 +1106,20 @@ TextureImporter:
       name: zombi_35
       rect:
         serializedVersion: 2
-        x: 449
-        y: 278
-        width: 64
-        height: 116
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 450
+        y: 279
+        width: 62
+        height: 114
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 182458c8e12384ba0800000000000000
-      internalID: -6104574188112756095
+      spriteID: 7901e769b3201f54d9c55dca126ea361
+      internalID: -551004856
       vertices: []
       indices: 
       edges: []
@@ -1128,20 +1128,20 @@ TextureImporter:
       name: zombi_36
       rect:
         serializedVersion: 2
-        x: 527
-        y: 278
-        width: 60
-        height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 528
+        y: 279
+        width: 58
+        height: 111
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 190127539811d3c20800000000000000
-      internalID: 3187723392253038737
+      spriteID: 7f775657f8d0bab4c80219b6ea54c4e8
+      internalID: 4191350
       vertices: []
       indices: 
       edges: []
@@ -1150,20 +1150,20 @@ TextureImporter:
       name: zombi_37
       rect:
         serializedVersion: 2
-        x: 587
-        y: 278
-        width: 64
-        height: 109
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 588
+        y: 279
+        width: 62
+        height: 107
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 58ae57648bc21c140800000000000000
-      internalID: 4738117452938209925
+      spriteID: d43542a67d100724db3d5bbfd23a13e1
+      internalID: 1877580018
       vertices: []
       indices: 
       edges: []
@@ -1172,20 +1172,20 @@ TextureImporter:
       name: zombi_38
       rect:
         serializedVersion: 2
-        x: 670
-        y: 278
-        width: 62
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 671
+        y: 279
+        width: 60
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7a6386cc09a823600800000000000000
-      internalID: 446571667572405927
+      spriteID: fa5143b6428ea294c9cfbbbd4e5071da
+      internalID: 182761151
       vertices: []
       indices: 
       edges: []
@@ -1194,20 +1194,20 @@ TextureImporter:
       name: zombi_39
       rect:
         serializedVersion: 2
-        x: 731
-        y: 278
-        width: 70
-        height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 732
+        y: 279
+        width: 68
+        height: 116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9aa74c3c5639a21d0800000000000000
-      internalID: -3374722905475351895
+      spriteID: 99e32f6679129584d8c74bfe70a4545c
+      internalID: 756324732
       vertices: []
       indices: 
       edges: []
@@ -1216,20 +1216,20 @@ TextureImporter:
       name: zombi_40
       rect:
         serializedVersion: 2
-        x: 813
-        y: 278
-        width: 70
-        height: 120
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 814
+        y: 279
+        width: 68
+        height: 118
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 332d4bf644a28fc80800000000000000
-      internalID: -8288828640755133901
+      spriteID: 9408cd51435343c40b2ebf5f65983782
+      internalID: 1380024527
       vertices: []
       indices: 
       edges: []
@@ -1238,20 +1238,20 @@ TextureImporter:
       name: zombi_41
       rect:
         serializedVersion: 2
-        x: 880
-        y: 278
-        width: 73
-        height: 122
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 881
+        y: 279
+        width: 71
+        height: 120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e7344f42c2e2c6550800000000000000
-      internalID: 6155345557842051966
+      spriteID: 07aefff919d6b9947a4648067c9a395f
+      internalID: 54796997
       vertices: []
       indices: 
       edges: []
@@ -1260,20 +1260,20 @@ TextureImporter:
       name: zombi_42
       rect:
         serializedVersion: 2
-        x: 962
-        y: 278
-        width: 68
-        height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 963
+        y: 279
+        width: 66
+        height: 123
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 411a2fdbf75663ec0800000000000000
-      internalID: -3587568453831974636
+      spriteID: adc07f1ab6d59c8489c2b81e8555d811
+      internalID: 650678721
       vertices: []
       indices: 
       edges: []
@@ -1282,20 +1282,20 @@ TextureImporter:
       name: zombi_43
       rect:
         serializedVersion: 2
-        x: 1034
-        y: 278
-        width: 136
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1035
+        y: 279
+        width: 134
+        height: 126
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 089a120bd2a2444e0800000000000000
-      internalID: -1998425958928766592
+      spriteID: 41091c6db1ef3bf43a74643b2ed3d6cf
+      internalID: 1620111122
       vertices: []
       indices: 
       edges: []
@@ -1304,20 +1304,20 @@ TextureImporter:
       name: zombi_44
       rect:
         serializedVersion: 2
-        x: 8
-        y: 135
-        width: 67
-        height: 122
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 9
+        y: 136
+        width: 65
+        height: 120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8927ee21b8b9335c0800000000000000
-      internalID: -4236871802805128552
+      spriteID: 8b28f7c96b95b8740b7dc082781e8205
+      internalID: -861802263
       vertices: []
       indices: 
       edges: []
@@ -1326,20 +1326,20 @@ TextureImporter:
       name: zombi_45
       rect:
         serializedVersion: 2
-        x: 78
-        y: 135
-        width: 67
-        height: 122
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 79
+        y: 136
+        width: 65
+        height: 120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f91b7e787b1440730800000000000000
-      internalID: 3964365828507808159
+      spriteID: 88273ad37680f204e818f9d89e95a8a1
+      internalID: 1490783872
       vertices: []
       indices: 
       edges: []
@@ -1348,20 +1348,20 @@ TextureImporter:
       name: zombi_46
       rect:
         serializedVersion: 2
-        x: 144
-        y: 135
-        width: 67
-        height: 121
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 145
+        y: 136
+        width: 65
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ec47ae60227129700800000000000000
-      internalID: 545523939777606862
+      spriteID: 9877a8c59e480534b931a82003677cf2
+      internalID: -439899717
       vertices: []
       indices: 
       edges: []
@@ -1370,20 +1370,20 @@ TextureImporter:
       name: zombi_47
       rect:
         serializedVersion: 2
-        x: 215
-        y: 135
-        width: 66
-        height: 117
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 216
+        y: 136
+        width: 64
+        height: 115
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: feb8ff9cf6fb02e30800000000000000
-      internalID: 4476788516457516015
+      spriteID: f69cad4d26da60448ba8e1c6c1d5005d
+      internalID: -1228854675
       vertices: []
       indices: 
       edges: []
@@ -1392,20 +1392,20 @@ TextureImporter:
       name: zombi_48
       rect:
         serializedVersion: 2
-        x: 284
-        y: 135
-        width: 67
-        height: 116
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 285
+        y: 136
+        width: 65
+        height: 114
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 25e89f833508427a0800000000000000
-      internalID: -6402851675287482798
+      spriteID: 94da29f2e74cd194da0dc8d41e07de98
+      internalID: -1109684069
       vertices: []
       indices: 
       edges: []
@@ -1414,20 +1414,20 @@ TextureImporter:
       name: zombi_49
       rect:
         serializedVersion: 2
-        x: 359
-        y: 135
-        width: 56
-        height: 117
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 360
+        y: 136
+        width: 54
+        height: 115
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6e6a0ac6df9de40e0800000000000000
-      internalID: -2283648278557841690
+      spriteID: 34b743f7684b64848b23a750a8132c36
+      internalID: -189340197
       vertices: []
       indices: 
       edges: []
@@ -1436,20 +1436,20 @@ TextureImporter:
       name: zombi_50
       rect:
         serializedVersion: 2
-        x: 421
-        y: 135
-        width: 57
-        height: 116
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 422
+        y: 136
+        width: 55
+        height: 114
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b38291d48a88740b0800000000000000
-      internalID: -5744472543258400709
+      spriteID: 3aa976cd1a8ff804ba6c8ae2d3a96843
+      internalID: -663864708
       vertices: []
       indices: 
       edges: []
@@ -1458,20 +1458,20 @@ TextureImporter:
       name: zombi_51
       rect:
         serializedVersion: 2
-        x: 485
-        y: 135
-        width: 56
-        height: 114
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 486
+        y: 136
+        width: 54
+        height: 112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9b10cedb40de4bd20800000000000000
-      internalID: 3293517832136688057
+      spriteID: 0c9f660e87ca9cd49845625fa1e8107b
+      internalID: 1506616583
       vertices: []
       indices: 
       edges: []
@@ -1480,20 +1480,20 @@ TextureImporter:
       name: zombi_52
       rect:
         serializedVersion: 2
-        x: 542
-        y: 135
-        width: 68
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 543
+        y: 136
+        width: 66
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0c75c99e7b63c9e60800000000000000
-      internalID: 7970305604065187776
+      spriteID: b2056ef5f58e0f448bc6ccfcbefee05a
+      internalID: -1186514173
       vertices: []
       indices: 
       edges: []
@@ -1502,20 +1502,20 @@ TextureImporter:
       name: zombi_53
       rect:
         serializedVersion: 2
-        x: 611
-        y: 135
-        width: 59
-        height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 612
+        y: 136
+        width: 57
+        height: 111
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0241ae5debf4f2d60800000000000000
-      internalID: 7867594755090813984
+      spriteID: bd37bd502d54564408d57379f562cd84
+      internalID: -1606901238
       vertices: []
       indices: 
       edges: []
@@ -1524,20 +1524,20 @@ TextureImporter:
       name: zombi_54
       rect:
         serializedVersion: 2
-        x: 672
-        y: 135
-        width: 63
-        height: 115
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 673
+        y: 136
+        width: 61
+        height: 113
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 92f3c254bbe8e80b0800000000000000
-      internalID: -5724481141370765527
+      spriteID: 8fc683adbcbfe63408f52d8825acef4d
+      internalID: -2094841063
       vertices: []
       indices: 
       edges: []
@@ -1546,20 +1546,20 @@ TextureImporter:
       name: zombi_55
       rect:
         serializedVersion: 2
-        x: 734
-        y: 135
-        width: 64
-        height: 116
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 735
+        y: 136
+        width: 62
+        height: 114
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5cb528ba5fd1a66b0800000000000000
-      internalID: -5302392670293697595
+      spriteID: 4c71823179b901d4795a6685e1071063
+      internalID: 1540886478
       vertices: []
       indices: 
       edges: []
@@ -1568,20 +1568,20 @@ TextureImporter:
       name: zombi_56
       rect:
         serializedVersion: 2
-        x: 797
-        y: 135
-        width: 69
-        height: 116
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 798
+        y: 136
+        width: 67
+        height: 114
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bb4575ab190fafb50800000000000000
-      internalID: 6627874310316315835
+      spriteID: 1548ea768132a5b428b832a91c16b2f6
+      internalID: 157361318
       vertices: []
       indices: 
       edges: []
@@ -1590,20 +1590,20 @@ TextureImporter:
       name: zombi_57
       rect:
         serializedVersion: 2
-        x: 864
-        y: 135
-        width: 64
-        height: 120
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 865
+        y: 136
+        width: 62
+        height: 118
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 83ead83b4aa3e9a00800000000000000
-      internalID: 765113465761017400
+      spriteID: cc9f755e1173a0b4b824c408543c68e9
+      internalID: -1027978689
       vertices: []
       indices: 
       edges: []
@@ -1612,20 +1612,20 @@ TextureImporter:
       name: zombi_58
       rect:
         serializedVersion: 2
-        x: 933
-        y: 135
-        width: 64
-        height: 121
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 934
+        y: 136
+        width: 62
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 09a15935c1035a490800000000000000
-      internalID: -7735723886719460720
+      spriteID: cff29acb99ec4614f90aafb52fb9ba31
+      internalID: -254073596
       vertices: []
       indices: 
       edges: []
@@ -1634,20 +1634,20 @@ TextureImporter:
       name: zombi_59
       rect:
         serializedVersion: 2
-        x: 1006
-        y: 135
-        width: 67
-        height: 121
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1007
+        y: 136
+        width: 65
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6fe4766070420f5f0800000000000000
-      internalID: -725039927415845130
+      spriteID: 1aa83078333bf77469ecbae6aa5d2301
+      internalID: 329008122
       vertices: []
       indices: 
       edges: []
@@ -1656,20 +1656,20 @@ TextureImporter:
       name: zombi_60
       rect:
         serializedVersion: 2
-        x: 0
-        y: 33
-        width: 89
-        height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1
+        y: 34
+        width: 87
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 39e0a6c7c6af35690800000000000000
-      internalID: -7614467201102639469
+      spriteID: e3d356a7a4c809f40acb0f2db441004e
+      internalID: -879444633
       vertices: []
       indices: 
       edges: []
@@ -1678,20 +1678,20 @@ TextureImporter:
       name: zombi_61
       rect:
         serializedVersion: 2
-        x: 97
-        y: 9
-        width: 81
-        height: 84
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 98
+        y: 10
+        width: 79
+        height: 82
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cf13fa18a7f3cbac0800000000000000
-      internalID: -3838122987032202756
+      spriteID: a3cfaadbbfeecaf4cb60796a01ed834f
+      internalID: 561405221
       vertices: []
       indices: 
       edges: []
@@ -1700,20 +1700,20 @@ TextureImporter:
       name: zombi_62
       rect:
         serializedVersion: 2
-        x: 205
-        y: 9
-        width: 64
-        height: 84
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 206
+        y: 10
+        width: 62
+        height: 82
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f145519f2a926da40800000000000000
-      internalID: 5392543383763112991
+      spriteID: 814d8df9cd5faa34fa20ddcd7e0ab6e2
+      internalID: 487849624
       vertices: []
       indices: 
       edges: []
@@ -1722,20 +1722,20 @@ TextureImporter:
       name: zombi_63
       rect:
         serializedVersion: 2
-        x: 287
-        y: 9
-        width: 77
-        height: 89
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 288
+        y: 10
+        width: 75
+        height: 87
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 232dd379dde1bc8d0800000000000000
-      internalID: -2825130404170837454
+      spriteID: 0a705668df816c448bdbda9c9bf4d7a8
+      internalID: 1350563380
       vertices: []
       indices: 
       edges: []
@@ -1744,20 +1744,20 @@ TextureImporter:
       name: zombi_64
       rect:
         serializedVersion: 2
-        x: 361
-        y: 27
-        width: 97
-        height: 73
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 362
+        y: 28
+        width: 95
+        height: 71
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e99f07abde1683190800000000000000
-      internalID: -7982522665851094626
+      spriteID: 671c7e06d10387047804e6e7d8985857
+      internalID: -252012531
       vertices: []
       indices: 
       edges: []
@@ -1766,20 +1766,20 @@ TextureImporter:
       name: zombi_65
       rect:
         serializedVersion: 2
-        x: 457
-        y: 34
-        width: 95
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 458
+        y: 35
+        width: 93
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5972e235b9b83f4b0800000000000000
-      internalID: -5407825228310108267
+      spriteID: 8970c581f5f4f1f458c871fbfefad762
+      internalID: -768098743
       vertices: []
       indices: 
       edges: []
@@ -1788,20 +1788,20 @@ TextureImporter:
       name: zombi_66
       rect:
         serializedVersion: 2
-        x: 560
-        y: 9
-        width: 86
-        height: 84
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 561
+        y: 10
+        width: 84
+        height: 82
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4fe767cfb358a2a60800000000000000
-      internalID: 7650073409727397620
+      spriteID: f2a8bf31bc1d17442996f46defd3b48c
+      internalID: -1467912404
       vertices: []
       indices: 
       edges: []
@@ -1810,20 +1810,20 @@ TextureImporter:
       name: zombi_67
       rect:
         serializedVersion: 2
-        x: 672
-        y: 9
-        width: 67
-        height: 84
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 673
+        y: 10
+        width: 65
+        height: 82
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 37a2697d49c083ff0800000000000000
-      internalID: -56281161930495373
+      spriteID: 7f2ae31c2c595f84487aa56800f7d014
+      internalID: 69628157
       vertices: []
       indices: 
       edges: []
@@ -1832,20 +1832,20 @@ TextureImporter:
       name: zombi_68
       rect:
         serializedVersion: 2
-        x: 760
-        y: 9
-        width: 75
-        height: 89
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 761
+        y: 10
+        width: 73
+        height: 87
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a04efdbd548aa31d0800000000000000
-      internalID: -3370196353138301942
+      spriteID: a6a4cf909c563af4882546bc1926bd32
+      internalID: 1823153770
       vertices: []
       indices: 
       edges: []
@@ -1854,20 +1854,86 @@ TextureImporter:
       name: zombi_69
       rect:
         serializedVersion: 2
-        x: 827
-        y: 29
-        width: 91
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 828
+        y: 30
+        width: 89
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2ce46f082cff8f260800000000000000
-      internalID: 7131731220793544386
+      spriteID: ca672197642c87d4f8dbbf74082cb466
+      internalID: 1120842777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zombi_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 547
+        width: 68
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 069c2dc808284de4e9276f7d7e32f3de
+      internalID: -547290239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zombi_14
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 547
+        width: 69
+        height: 125
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d105afc3e15794e8309c9e0da74300
+      internalID: -1282336178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zombi_15
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 547
+        width: 70
+        height: 125
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43e04610bdc86df458e3acb6ddc94c25
+      internalID: 1695404579
       vertices: []
       indices: 
       edges: []
@@ -1876,7 +1942,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: cbfd7bfbb1edb9747a78abbe7fec216f
     internalID: 0
     vertices: []
     indices: 
@@ -1885,7 +1951,80 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      zombi_0: -365220384
+      zombi_1: -547290239
+      zombi_10: 1540730873
+      zombi_1000: -762561812
+      zombi_11: 1412991754
+      zombi_111: -1047943962
+      zombi_12: 694163212
+      zombi_13: 765228676
+      zombi_14: -1282336178
+      zombi_15: 1695404579
+      zombi_16: 1004467677
+      zombi_17: -1240577802
+      zombi_18: -447073981
+      zombi_19: 391750983
+      zombi_2: 941110915
+      zombi_20: -1397957593
+      zombi_21: -147589109
+      zombi_22: -1952219295
+      zombi_23: 1571893299
+      zombi_24: -1732348495
+      zombi_25: -230087296
+      zombi_26: 322408106
+      zombi_27: -1385309762
+      zombi_28: 1070720309
+      zombi_29: -1840155525
+      zombi_3: 135448333
+      zombi_30: 182934098
+      zombi_31: -758332877
+      zombi_32: 1546986999
+      zombi_33: 1757307067
+      zombi_34: 841515105
+      zombi_35: -551004856
+      zombi_36: 4191350
+      zombi_37: 1877580018
+      zombi_38: 182761151
+      zombi_39: 756324732
+      zombi_4: -1916652430
+      zombi_40: 1380024527
+      zombi_41: 54796997
+      zombi_42: 650678721
+      zombi_43: 1620111122
+      zombi_44: -861802263
+      zombi_45: 1490783872
+      zombi_46: -439899717
+      zombi_47: -1228854675
+      zombi_48: -1109684069
+      zombi_49: -189340197
+      zombi_5: -402097609
+      zombi_50: -663864708
+      zombi_51: 1506616583
+      zombi_52: -1186514173
+      zombi_53: -1606901238
+      zombi_54: -2094841063
+      zombi_55: 1540886478
+      zombi_56: 157361318
+      zombi_57: -1027978689
+      zombi_58: -254073596
+      zombi_59: 329008122
+      zombi_6: 58998187
+      zombi_60: -879444633
+      zombi_61: 561405221
+      zombi_62: 487849624
+      zombi_63: 1350563380
+      zombi_64: -252012531
+      zombi_65: -768098743
+      zombi_66: -1467912404
+      zombi_67: 69628157
+      zombi_68: 1823153770
+      zombi_69: 1120842777
+      zombi_7: -801814847
+      zombi_8: -1457876253
+      zombi_800: 1921004082
+      zombi_9: 669044402
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
