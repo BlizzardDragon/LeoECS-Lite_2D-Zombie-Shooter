@@ -27,6 +27,7 @@ namespace _project.Scripts.LeoECS.Systems
         private readonly EcsPoolInject<DropComponent> _dropPool;
         private readonly EcsPoolInject<HitAudioComponent> _hitAudioPool;
         private readonly EcsPoolInject<AttackAudioComponent> _attackAudioPool;
+        private readonly EcsPoolInject<DeathAudioComponent> _deathAudioPool;
 
         private readonly EcsCustomInject<ITimeService> _timeService;
         private readonly EcsSharedInject<SharedData> _shared;
@@ -83,6 +84,7 @@ namespace _project.Scripts.LeoECS.Systems
             _targetFollowPool.Value.Add(enemyEntity).Target = _playerFilter.Pools.Inc3.Get(playerEntity).Transform;
             _hitAudioPool.Value.Add(enemyEntity).Clip = enemyConfig.AudioClipHit;
             _attackAudioPool.Value.Add(enemyEntity).Clip = enemyConfig.AudioClipAttack;
+            _deathAudioPool.Value.Add(enemyEntity).Clip = enemyConfig.AudioClipDeath;
 
             ref var healthComponent = ref _healthPool.Value.Add(enemyEntity);
             healthComponent.MaxHealth = enemyConfig.Health;
