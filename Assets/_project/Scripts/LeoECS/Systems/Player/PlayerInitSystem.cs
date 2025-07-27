@@ -10,8 +10,9 @@ namespace _project.Scripts.LeoECS.Systems.Player
     {
         private readonly EcsFilterInject<Inc<PlayerTag>> _playerFilter;
 
-        private readonly EcsPoolInject<MoveDirectionComponent> _moveDirectionPool;
         private readonly EcsPoolInject<EcsMonoObjectComponent> _ecsMonoObjectPool;
+        private readonly EcsPoolInject<MoveDirectionComponent> _moveDirectionPool;
+        private readonly EcsPoolInject<HealthComponent> _healthPool;
         private readonly EcsPoolInject<TeamComponent> _teamPool;
 
         private readonly EcsSharedInject<SharedData> _shared;
@@ -26,6 +27,10 @@ namespace _project.Scripts.LeoECS.Systems.Player
             ref var moveDirectionComponent = ref _moveDirectionPool.Value.Add(entity);
             moveDirectionComponent.MoveSpeed = _shared.Value.PlayerConfig.MoveSpeed;
             moveDirectionComponent.LastMoveDirection = 1;
+            
+            ref var healthComponent = ref _healthPool.Value.Add(entity);
+            healthComponent.CurrentHealth = _shared.Value.PlayerConfig.StartHealth;
+            healthComponent.MaxHealth = _shared.Value.PlayerConfig.StartHealth;
         }
     }
 }

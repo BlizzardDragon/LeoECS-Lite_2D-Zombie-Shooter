@@ -9,6 +9,8 @@ namespace _project.Scripts.LeoECS
     [Serializable]
     public class SharedData
     {
+        public static string GameplayGroupName = "Gameplay";
+        
         [SerializeField] private SerializableInterface<IEnemyConfigProvider> _enemyConfigProvider;
 
         [field: SerializeField] public Camera MainCamera { get; private set; }

@@ -1,7 +1,7 @@
 using System;
 using Leopotam.EcsLite;
 
-namespace _project.Scripts.LeoECS.Utilities
+namespace _project.Scripts.LeoECS.Utils
 {
     public static class EntitiesUnpackUtility
     {

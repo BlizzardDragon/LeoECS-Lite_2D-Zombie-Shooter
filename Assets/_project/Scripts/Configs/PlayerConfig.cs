@@ -8,6 +8,7 @@ namespace _project.Scripts.Configs
         order = 0)]
     public class PlayerConfig : ScriptableObject
     {
+        [field: SerializeField] public int StartHealth { get; private set; } = 1;
         [field: SerializeField] public float MoveSpeed { get; private set; }
     }
 }

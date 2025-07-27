@@ -1,6 +1,6 @@
 using _project.Scripts.Configs;
 using _project.Scripts.LeoECS.Components;
-using _project.Scripts.LeoECS.Utilities;
+using _project.Scripts.LeoECS.Utils;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
 
@@ -27,11 +27,8 @@ namespace _project.Scripts.LeoECS.Systems
 
                 ref var triggerEnterEvent = ref _triggerEnterFilter.Pools.Inc1.Get(entity);
 
-                var unpackedEntities = EntitiesUnpackUtility.Unpack(
+                var (firstEntity, secondEntity) = EntitiesUnpackUtility.Unpack(
                     triggerEnterEvent.FirstPackedEntity, triggerEnterEvent.SecondPackedEntity, _world.Value);
-
-                var firstEntity = unpackedEntities.firstEntity;
-                var secondEntity = unpackedEntities.secondEntity;
 
                 if (_teamPool.Value.Get(firstEntity).Team == _teamPool.Value.Get(secondEntity).Team) return;
 
