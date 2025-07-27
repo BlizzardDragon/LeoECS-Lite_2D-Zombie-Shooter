@@ -21,6 +21,8 @@ namespace _project.Scripts.LeoECS.Systems
         private readonly EcsPoolInject<HealthComponent> _healthPool;
         private readonly EcsPoolInject<DamageComponent> _damagePool;
         private readonly EcsPoolInject<TargetFollowComponent> _targetFollowPool;
+        private readonly EcsPoolInject<TeamComponent> _teamPool;
+        private readonly EcsPoolInject<EcsMonoObjectComponent> _ecsMonoObjectPool;
 
         private readonly EcsCustomInject<ITimeService> _timeService;
         private readonly EcsSharedInject<SharedData> _shared;
@@ -56,14 +58,7 @@ namespace _project.Scripts.LeoECS.Systems
 
             var xPositionCamera = _shared.Value.MainCamera.transform.position.x;
             var xPosition = xPositionCamera + _spawnConfig.SpawnDistance * moveDirectionComponent.LastMoveDirection;
-
-            if (xPosition == 0)
-            {
-                xPosition = 1;
-            }
-
             var spawnPosition = new Vector3(xPosition, 0, 0);
-
             var enemyContainer = _shared.Value.EnemyContainer;
 
             var enemy =
@@ -76,6 +71,8 @@ namespace _project.Scripts.LeoECS.Systems
             var enemyEntity = _world.Value.NewEntity();
             enemy.Init(enemyEntity, _world.Value);
 
+            _teamPool.Value.Add(enemyEntity).Team = TeamType.EnemyTeam;
+            _ecsMonoObjectPool.Value.Add(enemyEntity).EcsMonoObject = enemy;
             _transformPool.Value.Add(enemyEntity).Transform = enemy.transform;
             _moveDirectionPool.Value.Add(enemyEntity).MoveSpeed = enemyConfig.MoveSpeed;
             _damagePool.Value.Add(enemyEntity).Damage = enemyConfig.Damage;

@@ -11,5 +11,7 @@ namespace _project.Scripts.Configs
     {
         [field: SerializeField] public EcsMonoObject Prefab { get; private set; }
         [field: SerializeField] public float MoveSpeed { get; private set; }
+        [field: SerializeField] public int Damage { get; private set; }
+        [field: SerializeField] public float DestroyDelay { get; private set; }
     }
 }

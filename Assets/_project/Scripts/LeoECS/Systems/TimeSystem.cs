@@ -12,6 +12,7 @@ namespace _project.Scripts.LeoECS.Systems
         public void Run(IEcsSystems systems)
         {
             _timeService.Value.SetDeltaTIme(Time.deltaTime);
+            _timeService.Value.SetCurrentTIme(Time.time);
         }
     }
 }

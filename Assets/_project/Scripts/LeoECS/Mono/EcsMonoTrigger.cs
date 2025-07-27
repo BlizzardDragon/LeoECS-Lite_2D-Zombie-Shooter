@@ -19,17 +19,20 @@ namespace _project.Scripts.LeoECS.Mono
             var attachedRigidbody = other.attachedRigidbody;
             if (attachedRigidbody)
             {
-                if (attachedRigidbody.TryGetComponent<EcsMonoObject>(out var secondMonoObject))
+                if (attachedRigidbody.TryGetComponent<EcsMonoObject>(out var otherEcsMonoObject))
                 {
-                    if (PackedEntity.Unpack(_world, out var firstEntity) &&
-                        secondMonoObject.PackedEntity.Unpack(_world, out var secondEntity))
-                    {
-                        ref var triggerEnterEntityComponent = ref _triggerEnterEntityPool.Add(firstEntity);
-                        triggerEnterEntityComponent.FirstPackedEntity = PackedEntity;
-                        triggerEnterEntityComponent.SecondPackedEntity = secondMonoObject.PackedEntity;
-                    }
+                    ref var triggerEnterEntityComponent = ref _triggerEnterEntityPool.Add(_world.NewEntity());
+
+                    triggerEnterEntityComponent.FirstPackedEntity = PackedEntity;
+                    triggerEnterEntityComponent.SecondPackedEntity = otherEcsMonoObject.PackedEntity;
+
+                    OnTriggerEnter2DAction(otherEcsMonoObject);
                 }
             }
+        }
+
+        protected virtual void OnTriggerEnter2DAction(EcsMonoObject otherEcsMonoObject)
+        {
         }
     }
 }

@@ -1,6 +1,5 @@
 using _project.Scripts.LeoECS.Components;
 using _project.Scripts.LeoECS.Components.Events;
-using _project.Scripts.LeoECS.Components.Input;
 using _project.Scripts.LeoECS.Services;
 using _project.Scripts.LeoECS.Systems;
 using _project.Scripts.LeoECS.Systems.Input;
@@ -38,12 +37,21 @@ namespace _project.Scripts.LeoECS
                 // ===== Spawn    
                 .Add(new BulletSpawnSystem())
                 .Add(new EnemySpawnSystem())
+                // ===== Damage    
+                .Add(new DamageSystem())
+                .Add(new DeathSystem())
+                // ===== Destroy    
+                .Add(new DestroySystem())
+                .Add(new DestroyWithDelaySystem())
                 // ===== Animations    
                 .Add(new MoveFlipAnimationSystem())
                 .Add(new AnimationSystem())
+                // ===== View    
+                .Add(new HealthBarSystem())
                 // ===== DeleteEvents    
                 .DelHere<ShootAnimationEvent>()
                 .DelHere<TriggerEnterEntityEvent>()
+                .DelHere<DestroyEvent>()
 #if UNITY_EDITOR
                 .Add(new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem())
                 .Add(new Leopotam.EcsLite.UnityEditor.EcsSystemsDebugSystem())
