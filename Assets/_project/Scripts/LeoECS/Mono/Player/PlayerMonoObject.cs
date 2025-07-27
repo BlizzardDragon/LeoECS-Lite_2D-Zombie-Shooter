@@ -1,3 +1,4 @@
+using _project.Scripts.LeoECS.Components;
 using _project.Scripts.LeoECS.Components.Events;
 using Leopotam.EcsLite;
 using UnityEngine;
@@ -19,7 +20,7 @@ namespace _project.Scripts.LeoECS.Mono.Player
         public void CreateShootAnimationEvent()
         {
             PackedEntity.Unpack(_world, out var entity);
-            _shootPool.Add(entity).ShootPoint = _shootPoint;
+            _shootPool.Add(entity).ShootPointSource = _shootPoint;
         }
     }
 }

@@ -7,7 +7,7 @@ namespace _project.Scripts.View
     {
         float FillAmount { get; }
 
-        void SetFillAmount(float fillAmount);
+        void RenderFillAmount(float fillAmount);
     }
 
     public class HealthBarView : MonoBehaviour, IHealthBarView
@@ -16,7 +16,7 @@ namespace _project.Scripts.View
         
         public float FillAmount => _image.fillAmount;
 
-        public void SetFillAmount(float fillAmount)
+        public void RenderFillAmount(float fillAmount)
         {
             _image.fillAmount = fillAmount;
         }

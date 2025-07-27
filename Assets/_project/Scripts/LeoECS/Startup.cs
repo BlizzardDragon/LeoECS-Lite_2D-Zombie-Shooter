@@ -40,19 +40,22 @@ namespace _project.Scripts.LeoECS
                     new TargetFollowSystem(),
                     new MoveDirectionSystem(),
                     // ===== Spawn    
+                    new AmmoSystem(),
                     new BulletSpawnSystem(),
                     new EnemySpawnSystem(),
                     // ===== Damage    
                     new DamageSystem(),
                     new DeathSystem(),
                     // ===== GameOver
-                    new GameOverSystem(),
+                    new PlayerAmmoGameOverSystem(),
+                    new PlayerHealthGameOverSystem(),
                     // ===== Animations    
                     new MoveFlipAnimationSystem(),
                     new AnimationSystem(),
                     // ===== View
                     new HealthBarSystem(),
                     // ===== UI
+                    new PlayerAmmoViewSystem(),
                     new GameOverScreenSystem()
                 )
                 // ===== EnableGroups    
@@ -68,6 +71,7 @@ namespace _project.Scripts.LeoECS
                 .DelHere<TriggerEnterEntityEvent>()
                 .DelHere<DestroyEvent>()
                 .DelHere<GameOverEvent>()
+                .DelHere<SpawnBulletEvent>()
 #if UNITY_EDITOR
                 .Add(new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem())
                 .Add(new Leopotam.EcsLite.UnityEditor.EcsSystemsDebugSystem())

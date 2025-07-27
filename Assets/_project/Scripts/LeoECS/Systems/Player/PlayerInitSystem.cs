@@ -14,6 +14,7 @@ namespace _project.Scripts.LeoECS.Systems.Player
         private readonly EcsPoolInject<MoveDirectionComponent> _moveDirectionPool;
         private readonly EcsPoolInject<HealthComponent> _healthPool;
         private readonly EcsPoolInject<TeamComponent> _teamPool;
+        private readonly EcsPoolInject<AmmoComponent> _ammoPool;
 
         private readonly EcsSharedInject<SharedData> _shared;
 
@@ -23,6 +24,7 @@ namespace _project.Scripts.LeoECS.Systems.Player
 
             _ecsMonoObjectPool.Value.Get(entity).EcsMonoObject.Init(entity, systems.GetWorld());
             _teamPool.Value.Add(entity).Team = TeamType.PlayerTeam;
+            _ammoPool.Value.Add(entity).AmmoCount = _shared.Value.PlayerConfig.StartAmmoCount;
             
             ref var moveDirectionComponent = ref _moveDirectionPool.Value.Add(entity);
             moveDirectionComponent.MoveSpeed = _shared.Value.PlayerConfig.MoveSpeed;

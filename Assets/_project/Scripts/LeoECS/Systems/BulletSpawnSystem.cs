@@ -11,8 +11,7 @@ namespace _project.Scripts.LeoECS.Systems
 {
     public class BulletSpawnSystem : IEcsRunSystem
     {
-        private readonly EcsFilterInject<Inc<ShootAnimationEvent, MoveDirectionComponent, TeamComponent>>
-            _shootAnimationPool;
+        private readonly EcsFilterInject<Inc<SpawnBulletEvent, MoveDirectionComponent, TeamComponent>> _spawnBulletPool;
 
         private readonly EcsPoolInject<TransformComponent> _transformPool;
         private readonly EcsPoolInject<DamageComponent> _damagePool;
@@ -26,14 +25,14 @@ namespace _project.Scripts.LeoECS.Systems
 
         public void Run(IEcsSystems systems)
         {
-            var entities = _shootAnimationPool.Value.GetRawEntities();
-            var count = _shootAnimationPool.Value.GetEntitiesCount();
+            var entities = _spawnBulletPool.Value.GetRawEntities();
+            var count = _spawnBulletPool.Value.GetEntitiesCount();
             var bulletConfig = _shared.Value.BulletConfig;
 
             for (int i = 0; i < count; i++)
             {
                 var sourceEntity = entities[i];
-                var lastMoveDirection = _shootAnimationPool.Pools.Inc2.Get(sourceEntity).LastMoveDirection;
+                var lastMoveDirection = _spawnBulletPool.Pools.Inc2.Get(sourceEntity).LastMoveDirection;
 
                 var bullet = SpawnBullet(sourceEntity, lastMoveDirection, bulletConfig);
                 Init(sourceEntity, bullet, bulletConfig, lastMoveDirection);
@@ -43,7 +42,7 @@ namespace _project.Scripts.LeoECS.Systems
         private EcsMonoObject SpawnBullet(int sourceEntity, int lastMoveDirection, BulletConfig bulletConfig)
         {
             var prefab = bulletConfig.Prefab;
-            var spawnPosition = _shootAnimationPool.Pools.Inc1.Get(sourceEntity).ShootPoint.position;
+            var spawnPosition = _spawnBulletPool.Pools.Inc1.Get(sourceEntity).ShootPointSource.position;
             var spawnContainer = _shared.Value.BulletContainer;
 
             var bullet = Object.Instantiate(prefab, spawnPosition, Quaternion.identity, spawnContainer);
@@ -58,11 +57,11 @@ namespace _project.Scripts.LeoECS.Systems
             bullet.Init(entity, _world.Value);
 
             _ecsMonoObjectPool.Value.Add(entity).EcsMonoObject = bullet;
-            _teamPool.Value.Add(entity).Team = _shootAnimationPool.Pools.Inc3.Get(sourceEntity).Team;
+            _teamPool.Value.Add(entity).Team = _spawnBulletPool.Pools.Inc3.Get(sourceEntity).Team;
             _damagePool.Value.Add(entity).Damage = bulletConfig.Damage;
             _transformPool.Value.Add(entity).Transform = bullet.transform;
 
-            ref var moveDirectionComponent = ref _shootAnimationPool.Pools.Inc2.Add(entity);
+            ref var moveDirectionComponent = ref _spawnBulletPool.Pools.Inc2.Add(entity);
             moveDirectionComponent.MoveSpeed = bulletConfig.MoveSpeed;
             moveDirectionComponent.MoveDirection = lastMoveDirection;
 

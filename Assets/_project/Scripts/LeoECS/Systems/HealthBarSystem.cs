@@ -26,7 +26,7 @@ namespace _project.Scripts.LeoECS.Systems
 
                 if (Math.Abs(healthBarViewComponent.View.Value.FillAmount - fillAmount) > 0.001f)
                 {
-                    healthBarViewComponent.View.Value.SetFillAmount(fillAmount);
+                    healthBarViewComponent.View.Value.RenderFillAmount(fillAmount);
                 }
             }
         }

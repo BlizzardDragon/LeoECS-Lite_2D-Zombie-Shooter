@@ -5,9 +5,9 @@ using LeoECS.Extensions;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
 
-namespace _project.Scripts.LeoECS.Systems
+namespace _project.Scripts.LeoECS.Systems.Player
 {
-    public class GameOverSystem : IEcsRunSystem
+    public class PlayerHealthGameOverSystem : IEcsRunSystem
     {
         private readonly EcsFilterInject<Inc<PlayerTag, HealthComponent>> _playerFilter;
 

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace _project.Scripts.View
+namespace _project.Scripts.UI
 {
     public interface IScreenView
     {

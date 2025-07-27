@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace _project.Scripts.LeoECS.Components.Events
 {
-    public struct ShootAnimationEvent
+    public struct SpawnBulletEvent
     {
         public Transform ShootPointSource;
     }

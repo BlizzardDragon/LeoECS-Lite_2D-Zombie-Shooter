@@ -10,5 +10,6 @@ namespace _project.Scripts.Configs
     {
         [field: SerializeField] public int StartHealth { get; private set; } = 1;
         [field: SerializeField] public float MoveSpeed { get; private set; }
+        [field: SerializeField] public int StartAmmoCount { get; private set; } = 50;
     }
 }
