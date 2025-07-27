@@ -1,10 +1,10 @@
 using _project.Scripts.LeoECS.Components;
+using _project.Scripts.LeoECS.Components.Audio;
 using _project.Scripts.LeoECS.Components.Events;
 using _project.Scripts.LeoECS.Components.Tags;
 using _project.Scripts.LeoECS.Utils;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
-using UnityEngine;
 
 namespace _project.Scripts.LeoECS.Systems.Player
 {
@@ -18,6 +18,8 @@ namespace _project.Scripts.LeoECS.Systems.Player
         private readonly EcsPoolInject<PickUpItemComponent> _pickUpItemPool;
         private readonly EcsPoolInject<DestroyEvent> _destroyPool;
         private readonly EcsPoolInject<EcsMonoObjectComponent> _ecsMonoObjectPool;
+        private readonly EcsPoolInject<PickUpAudioComponent> _pickUpAudioPool;
+        private readonly EcsPoolInject<AudioEvent> _audioPool;
 
         private readonly EcsSharedInject<SharedData> _shared;
         private readonly EcsWorldInject _world;
@@ -32,32 +34,47 @@ namespace _project.Scripts.LeoECS.Systems.Player
                 var entity = entities[i];
                 ref var triggerEnterEvent = ref _triggerEnterFilter.Pools.Inc1.Get(entity);
 
-                var (firstEntity, secondEntity) = EntitiesUnpackUtility.Unpack(
+                var (collectEntity, itemEntity) = EntitiesUnpackUtility.Unpack(
                     triggerEnterEvent.FirstPackedEntity, triggerEnterEvent.SecondPackedEntity, _world.Value);
 
-                if (!_ammoPool.Value.Has(firstEntity) || !_playerTagPool.Value.Has(firstEntity)) return;
-                if (!_pickUpItemPool.Value.Has(secondEntity)) return;
+                if (!_ammoPool.Value.Has(collectEntity) || !_playerTagPool.Value.Has(collectEntity)) return;
+                if (!_pickUpItemPool.Value.Has(itemEntity)) return;
 
-                ref var itemComponent = ref _pickUpItemPool.Value.Get(secondEntity);
+                ref var itemComponent = ref _pickUpItemPool.Value.Get(itemEntity);
                 var itemCount = itemComponent.Count;
 
                 if (itemCount == 0) return;
 
                 var playerAmmoItemID = _shared.Value.PlayerConfig.AmmoItemID;
 
-                if (itemComponent.ID == playerAmmoItemID)
-                {
-                    ref var ammoComponent = ref _ammoPool.Value.Get(firstEntity);
-                    ammoComponent.AmmoCount += itemCount;
-                    _ammoChangedPool.Value.Add(firstEntity);
+                if (itemComponent.ID != playerAmmoItemID) continue;
 
-                    if (_ecsMonoObjectPool.Value.Has(secondEntity))
-                    {
-                        var itemGameObject = _ecsMonoObjectPool.Value.Get(secondEntity).EcsMonoObject.gameObject;
-                        _destroyPool.Value.Add(secondEntity).GameObject = itemGameObject;
-                    }
-                }
+                AddAmmo(collectEntity, itemCount);
+                PlayAudio(itemEntity);
+                DestroyItem(itemEntity);
             }
+        }
+
+        private void AddAmmo(int collectEntity, int itemCount)
+        {
+            ref var ammoComponent = ref _ammoPool.Value.Get(collectEntity);
+            ammoComponent.AmmoCount += itemCount;
+            _ammoChangedPool.Value.Add(collectEntity);
+        }
+
+        private void PlayAudio(int itemEntity)
+        {
+            if (!_pickUpAudioPool.Value.Has(itemEntity)) return;
+
+            _audioPool.Value.Add(itemEntity).Clip = _pickUpAudioPool.Value.Get(itemEntity).Clip;
+        }
+
+        private void DestroyItem(int itemEntity)
+        {
+            if (!_ecsMonoObjectPool.Value.Has(itemEntity)) return;
+
+            var itemGameObject = _ecsMonoObjectPool.Value.Get(itemEntity).EcsMonoObject.gameObject;
+            _destroyPool.Value.Add(itemEntity).GameObject = itemGameObject;
         }
     }
 }

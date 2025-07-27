@@ -15,4 +15,9 @@ MonoBehaviour:
   <MoveSpeed>k__BackingField: 3
   <Damage>k__BackingField: 10000
   <Health>k__BackingField: 6
+  <MaxDrop>k__BackingField: 5
+  <MinDrop>k__BackingField: 1
+  <AudioClipAttack>k__BackingField: {fileID: 8300000, guid: 22e33031adf1c164da8a17cbcd2e133b, type: 3}
+  <AudioClipHit>k__BackingField: {fileID: 8300000, guid: 291fd58d5b40da04aabb36bc62d6a510, type: 3}
   <Prefab>k__BackingField: {fileID: 7747274103198757116, guid: 0570fd0c3f4bd9446bd13107799101f0, type: 3}
+  <ItemDrop>k__BackingField: {fileID: 11400000, guid: fd14436fce2ae7a4bb935d0805be9a8e, type: 2}

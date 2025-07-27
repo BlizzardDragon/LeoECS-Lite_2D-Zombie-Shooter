@@ -1,4 +1,5 @@
 using _project.Scripts.LeoECS.Components;
+using _project.Scripts.LeoECS.Components.Audio;
 using _project.Scripts.LeoECS.Components.Events;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
@@ -12,6 +13,7 @@ namespace _project.Scripts.LeoECS.Systems
 
         private readonly EcsPoolInject<PickUpItemComponent> _pickUpItemPool;
         private readonly EcsPoolInject<EcsMonoObjectComponent> _ecsMonoObjectPool;
+        private readonly EcsPoolInject<PickUpAudioComponent> _pickUpAudioPool;
 
         private readonly EcsSharedInject<SharedData> _shared;
         private readonly EcsWorldInject _world;
@@ -26,7 +28,8 @@ namespace _project.Scripts.LeoECS.Systems
                 var dropSourceEntity = entities[i];
 
                 var dropComponent = _dropFilter.Pools.Inc1.Get(dropSourceEntity);
-                var prefab = _shared.Value.ItemConfigProvider.GetConfig(dropComponent.ID).Prefab;
+                var itemConfig = _shared.Value.ItemConfigProvider.GetConfig(dropComponent.ID);
+                var prefab = itemConfig.Prefab;
                 var spawnPosition = _dropFilter.Pools.Inc2.Get(dropSourceEntity).GameObject.transform.position;
 
                 var item =
@@ -34,8 +37,9 @@ namespace _project.Scripts.LeoECS.Systems
 
                 var itemEntity = _world.Value.NewEntity();
                 item.Init(itemEntity, _world.Value);
-                
+
                 _ecsMonoObjectPool.Value.Add(itemEntity).EcsMonoObject = item;
+                _pickUpAudioPool.Value.Add(itemEntity).Clip = itemConfig.AudioClipPickUp;
                 
                 ref var pickUpItemComponent = ref _pickUpItemPool.Value.Add(itemEntity);
                 pickUpItemComponent.ID = dropComponent.ID;

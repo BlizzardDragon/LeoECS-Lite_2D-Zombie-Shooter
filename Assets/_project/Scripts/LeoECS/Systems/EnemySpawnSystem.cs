@@ -1,6 +1,7 @@
 using _project.Scripts.Configs;
 using _project.Scripts.Configs.Enemies;
 using _project.Scripts.LeoECS.Components;
+using _project.Scripts.LeoECS.Components.Audio;
 using _project.Scripts.LeoECS.Components.Tags;
 using _project.Scripts.LeoECS.Mono;
 using _project.Scripts.LeoECS.Services;
@@ -24,6 +25,8 @@ namespace _project.Scripts.LeoECS.Systems
         private readonly EcsPoolInject<TeamComponent> _teamPool;
         private readonly EcsPoolInject<EcsMonoObjectComponent> _ecsMonoObjectPool;
         private readonly EcsPoolInject<DropComponent> _dropPool;
+        private readonly EcsPoolInject<HitAudioComponent> _hitAudioPool;
+        private readonly EcsPoolInject<AttackAudioComponent> _attackAudioPool;
 
         private readonly EcsCustomInject<ITimeService> _timeService;
         private readonly EcsSharedInject<SharedData> _shared;
@@ -78,6 +81,8 @@ namespace _project.Scripts.LeoECS.Systems
             _moveDirectionPool.Value.Add(enemyEntity).MoveSpeed = enemyConfig.MoveSpeed;
             _damagePool.Value.Add(enemyEntity).Damage = enemyConfig.Damage;
             _targetFollowPool.Value.Add(enemyEntity).Target = _playerFilter.Pools.Inc3.Get(playerEntity).Transform;
+            _hitAudioPool.Value.Add(enemyEntity).Clip = enemyConfig.AudioClipHit;
+            _attackAudioPool.Value.Add(enemyEntity).Clip = enemyConfig.AudioClipAttack;
 
             ref var healthComponent = ref _healthPool.Value.Add(enemyEntity);
             healthComponent.MaxHealth = enemyConfig.Health;

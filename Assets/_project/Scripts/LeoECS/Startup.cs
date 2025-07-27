@@ -1,4 +1,6 @@
+using _project.Scripts.Audio;
 using _project.Scripts.LeoECS.Components;
+using _project.Scripts.LeoECS.Components.Audio;
 using _project.Scripts.LeoECS.Components.Events;
 using _project.Scripts.LeoECS.Services;
 using _project.Scripts.LeoECS.Systems;
@@ -16,6 +18,7 @@ namespace _project.Scripts.LeoECS
 {
     class Startup : MonoBehaviour
     {
+        [SerializeField] private AudioPlayer _audioPlayer;
         [SerializeField] private EcsUguiEmitter _ecsUguiEmitter;
         [SerializeField] private SharedData _sharedData;
 
@@ -67,6 +70,8 @@ namespace _project.Scripts.LeoECS
                 // ===== UI
                 .Add(new ClickExitEventSystem())
                 .Add(new ClickRestartEventSystem())
+                // ===== Audio
+                .Add(new AudioSystem())
                 // ===== Destroy    
                 .Add(new DestroySystem())
                 // ===== DeleteEvents    
@@ -76,13 +81,14 @@ namespace _project.Scripts.LeoECS
                 .DelHere<GameOverEvent>()
                 .DelHere<SpawnBulletEvent>()
                 .DelHere<AmmoChangedEvent>()
+                .DelHere<AudioEvent>()
 #if UNITY_EDITOR
                 .Add(new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem())
                 .Add(new Leopotam.EcsLite.UnityEditor.EcsSystemsDebugSystem())
 #endif
                 .ConvertScene()
                 .InjectUgui(_ecsUguiEmitter)
-                .Inject((ITimeService) new TimeService())
+                .Inject((ITimeService) new TimeService(), (IAudioPlayer) _audioPlayer)
                 .Init();
         }
 

@@ -11,6 +11,7 @@ namespace _project.Scripts.Configs.Items
     {
         [field: SerializeField] public string Name { get; private set; }
         [field: SerializeField] public int ID { get; private set; }
+        [field: SerializeField] public AudioClip AudioClipPickUp { get; private set; }
         [field: SerializeField] public EcsMonoObject Prefab { get; private set; }
 
 

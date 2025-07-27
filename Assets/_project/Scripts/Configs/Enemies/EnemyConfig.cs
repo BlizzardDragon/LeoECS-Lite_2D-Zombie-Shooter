@@ -15,6 +15,8 @@ namespace _project.Scripts.Configs.Enemies
         [field: SerializeField] public int Health { get; private set; }
         [field: SerializeField] public int MaxDrop { get; private set; }
         [field: SerializeField] public int MinDrop { get; private set; }
+        [field: SerializeField] public AudioClip AudioClipAttack { get; private set; }
+        [field: SerializeField] public AudioClip AudioClipHit { get; private set; }
         [field: SerializeField] public EcsMonoObject Prefab { get; private set; }
         [field: SerializeField] public ItemConfig ItemDrop { get; private set; }
     }

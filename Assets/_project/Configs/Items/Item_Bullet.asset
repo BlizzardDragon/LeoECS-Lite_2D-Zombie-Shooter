@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Bullet
   <ID>k__BackingField: -976773162
+  <AudioClipPickUp>k__BackingField: {fileID: 8300000, guid: b8c9322f72c1149418b627c307de28db, type: 3}
   <Prefab>k__BackingField: {fileID: 7789873039665566234, guid: 76be323a370e24e4685cd9e0ac8727f0, type: 3}

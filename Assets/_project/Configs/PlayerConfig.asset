@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f9bc3b69a7e4e3fa8d7d6c01a460ff4, type: 3}
   m_Name: PlayerConfig
   m_EditorClassIdentifier: 
+  _ammoItem: {fileID: 11400000, guid: fd14436fce2ae7a4bb935d0805be9a8e, type: 2}
+  <StartHealth>k__BackingField: 1
   <MoveSpeed>k__BackingField: 15
+  <StartAmmoCount>k__BackingField: 50
