@@ -5989,6 +5989,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5051409366654346177, guid: 567fd3c638e660d45bdca225dda727e9, type: 3}
   m_PrefabInstance: {fileID: 836674789}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &844956917
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 844956918}
+  m_Layer: 0
+  m_Name: Items
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &844956918
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844956917}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1513217494}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &852070091
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9553,6 +9584,7 @@ Transform:
   m_Children:
   - {fileID: 1553773245}
   - {fileID: 715148355}
+  - {fileID: 844956918}
   m_Father: {fileID: 407880768}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1519307448
@@ -12225,9 +12257,15 @@ MonoBehaviour:
       unityReference: {fileID: 11400000, guid: 1670c5d6693a7c043a65c703590ca366, type: 2}
       rawReference:
         rid: -2
+    _itemConfigProvider:
+      mode: 0
+      unityReference: {fileID: 11400000, guid: d077d75adcb95c94a8819ac619229d04, type: 2}
+      rawReference:
+        rid: -2
     <MainCamera>k__BackingField: {fileID: 519420031}
     <BulletContainer>k__BackingField: {fileID: 1553773245}
     <EnemyContainer>k__BackingField: {fileID: 715148355}
+    <ItemsContainer>k__BackingField: {fileID: 844956918}
     <PlayerConfig>k__BackingField: {fileID: 11400000, guid: e879798fbfe360d419f438981cd29359, type: 2}
     <BulletConfig>k__BackingField: {fileID: 11400000, guid: c9bf5f7b8176d124a9200771689e648c, type: 2}
   references:

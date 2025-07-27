@@ -10,6 +10,7 @@ namespace _project.Scripts.LeoECS.Systems
         private readonly EcsFilterInject<Inc<ShootAnimationEvent, AmmoComponent>> _shootAnimationPool;
 
         private readonly EcsPoolInject<SpawnBulletEvent> _spawnBulletPool;
+        private readonly EcsPoolInject<AmmoChangedEvent> _ammoChangedPool;
 
         public void Run(IEcsSystems systems)
         {
@@ -27,6 +28,7 @@ namespace _project.Scripts.LeoECS.Systems
 
                     var shootPoint = _shootAnimationPool.Pools.Inc1.Get(entity).ShootPointSource;
                     _spawnBulletPool.Value.Add(entity).ShootPointSource = shootPoint;
+                    _ammoChangedPool.Value.Add(entity);
                 }
             }
         }

@@ -1,5 +1,4 @@
 using _project.Scripts.LeoECS.Components;
-using _project.Scripts.LeoECS.Components.Events;
 using _project.Scripts.LeoECS.Components.Tags;
 using _project.Scripts.LeoECS.Components.UI;
 using LeoECS.Extensions;
@@ -13,7 +12,7 @@ namespace _project.Scripts.LeoECS.Systems.UI
         private readonly EcsFilterInject<Inc<AmmoComponent, PlayerTag>> _playerFilter;
         private readonly EcsFilterInject<Inc<AmmoViewComponent>> _ammoViewFilter;
 
-        private readonly EcsPoolInject<SpawnBulletEvent> _spawnBulletPool;
+        private readonly EcsPoolInject<AmmoChangedEvent> _ammoChangedPool;
 
         public void Init(IEcsSystems systems)
         {
@@ -24,7 +23,7 @@ namespace _project.Scripts.LeoECS.Systems.UI
         public void Run(IEcsSystems systems)
         {
             if (!_playerFilter.TryGetSingleEntity(out var playerEntity)) return;
-            if (!_spawnBulletPool.Value.Has(playerEntity)) return;
+            if (!_ammoChangedPool.Value.Has(playerEntity)) return;
 
             UpdateView(playerEntity);
         }

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace _project.Scripts.LeoECS.Mono.Player
 {
-    public class PlayerMonoObject : EcsMonoObject
+    public class PlayerMonoObject : EcsMonoTrigger
     {
         [SerializeField] private Transform _shootPoint;
 

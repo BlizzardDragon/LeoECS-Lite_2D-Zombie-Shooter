@@ -1,8 +1,8 @@
 using _project.Scripts.LeoECS.Components;
+using _project.Scripts.LeoECS.Components.Events;
 using _project.Scripts.LeoECS.Services;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
-using UnityEngine;
 
 namespace _project.Scripts.LeoECS.Systems
 {
@@ -10,9 +10,11 @@ namespace _project.Scripts.LeoECS.Systems
     {
         private readonly EcsFilterInject<Inc<DestroyWithDelayComponent>> _destroyWithDelayFilter;
 
+        private readonly EcsPoolInject<DestroyEvent> _destroyPool;
+
         private readonly EcsCustomInject<ITimeService> _timeService;
         private readonly EcsWorldInject _world;
-        
+
         public void Run(IEcsSystems systems)
         {
             var entities = _destroyWithDelayFilter.Value.GetRawEntities();
@@ -24,17 +26,16 @@ namespace _project.Scripts.LeoECS.Systems
 
                 ref var destroyWithDelayComponent = ref _destroyWithDelayFilter.Pools.Inc1.Get(entity);
                 var destroyTime = destroyWithDelayComponent.StartTime + destroyWithDelayComponent.Delay;
-                
+
                 if (_timeService.Value.CurrentTime >= destroyTime)
                 {
-                    var gameObject = destroyWithDelayComponent.GameObject;
-
-                    if (gameObject != null)
+                    if (!_destroyPool.Value.Has(entity))
                     {
-                        Object.Destroy(gameObject);
+                        var gameObject = destroyWithDelayComponent.GameObject;
+                        _destroyPool.Value.Add(entity).GameObject = gameObject;
                     }
-                    
-                    _world.Value.DelEntity(entity);
+
+                    _destroyWithDelayFilter.Pools.Inc1.Del(entity);
                 }
             }
         }

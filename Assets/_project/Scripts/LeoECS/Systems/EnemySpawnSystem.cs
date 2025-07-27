@@ -23,6 +23,7 @@ namespace _project.Scripts.LeoECS.Systems
         private readonly EcsPoolInject<TargetFollowComponent> _targetFollowPool;
         private readonly EcsPoolInject<TeamComponent> _teamPool;
         private readonly EcsPoolInject<EcsMonoObjectComponent> _ecsMonoObjectPool;
+        private readonly EcsPoolInject<DropComponent> _dropPool;
 
         private readonly EcsCustomInject<ITimeService> _timeService;
         private readonly EcsSharedInject<SharedData> _shared;
@@ -81,6 +82,10 @@ namespace _project.Scripts.LeoECS.Systems
             ref var healthComponent = ref _healthPool.Value.Add(enemyEntity);
             healthComponent.MaxHealth = enemyConfig.Health;
             healthComponent.CurrentHealth = enemyConfig.Health;
+
+            ref var dropComponent = ref _dropPool.Value.Add(enemyEntity);
+            dropComponent.ID = enemyConfig.ItemDrop.ID;
+            dropComponent.Count = Random.Range(enemyConfig.MinDrop, enemyConfig.MaxDrop + 1);
 
             if (enemy.TryGetComponent<ComponentsContainer>(out var componentsContainer))
             {

@@ -1,3 +1,4 @@
+using _project.Scripts.Configs.Items;
 using _project.Scripts.LeoECS.Mono;
 using UnityEngine;
 
@@ -12,6 +13,9 @@ namespace _project.Scripts.Configs.Enemies
         [field: SerializeField] public float MoveSpeed { get; private set; }
         [field: SerializeField] public int Damage { get; private set; }
         [field: SerializeField] public int Health { get; private set; }
+        [field: SerializeField] public int MaxDrop { get; private set; }
+        [field: SerializeField] public int MinDrop { get; private set; }
         [field: SerializeField] public EcsMonoObject Prefab { get; private set; }
+        [field: SerializeField] public ItemConfig ItemDrop { get; private set; }
     }
 }

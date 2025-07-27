@@ -45,7 +45,11 @@ namespace _project.Scripts.LeoECS
                     new EnemySpawnSystem(),
                     // ===== Damage    
                     new DamageSystem(),
+                    // ===== Death    
                     new DeathSystem(),
+                    new DestroyWithDelaySystem(),
+                    new ItemDropSystem(),
+                    new PlayerPickUpSystem(),
                     // ===== GameOver
                     new PlayerAmmoGameOverSystem(),
                     new PlayerHealthGameOverSystem(),
@@ -65,13 +69,13 @@ namespace _project.Scripts.LeoECS
                 .Add(new ClickRestartEventSystem())
                 // ===== Destroy    
                 .Add(new DestroySystem())
-                .Add(new DestroyWithDelaySystem())
                 // ===== DeleteEvents    
                 .DelHere<ShootAnimationEvent>()
                 .DelHere<TriggerEnterEntityEvent>()
                 .DelHere<DestroyEvent>()
                 .DelHere<GameOverEvent>()
                 .DelHere<SpawnBulletEvent>()
+                .DelHere<AmmoChangedEvent>()
 #if UNITY_EDITOR
                 .Add(new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem())
                 .Add(new Leopotam.EcsLite.UnityEditor.EcsSystemsDebugSystem())

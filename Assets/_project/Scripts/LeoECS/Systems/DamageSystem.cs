@@ -30,6 +30,7 @@ namespace _project.Scripts.LeoECS.Systems
                 var (firstEntity, secondEntity) = EntitiesUnpackUtility.Unpack(
                     triggerEnterEvent.FirstPackedEntity, triggerEnterEvent.SecondPackedEntity, _world.Value);
 
+                if (!_teamPool.Value.Has(firstEntity) || !_teamPool.Value.Has(secondEntity)) return;
                 if (_teamPool.Value.Get(firstEntity).Team == _teamPool.Value.Get(secondEntity).Team) return;
 
                 if (_damagePool.Value.Has(firstEntity))
