@@ -19,5 +19,6 @@ MonoBehaviour:
   <MinDrop>k__BackingField: 1
   <AudioClipAttack>k__BackingField: {fileID: 8300000, guid: 22e33031adf1c164da8a17cbcd2e133b, type: 3}
   <AudioClipHit>k__BackingField: {fileID: 8300000, guid: 291fd58d5b40da04aabb36bc62d6a510, type: 3}
+  <AudioClipDeath>k__BackingField: {fileID: 8300000, guid: d8500ec8cca71044d9df636cabf521b1, type: 3}
   <Prefab>k__BackingField: {fileID: 6993872351338259969, guid: fbb8b9bc4e8e04f46b41f0bd97b82d5b, type: 3}
   <ItemDrop>k__BackingField: {fileID: 11400000, guid: fd14436fce2ae7a4bb935d0805be9a8e, type: 2}
