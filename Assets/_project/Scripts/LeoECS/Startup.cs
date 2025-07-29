@@ -4,7 +4,6 @@ using _project.Scripts.LeoECS.Components.Audio;
 using _project.Scripts.LeoECS.Components.Events;
 using _project.Scripts.LeoECS.Services;
 using _project.Scripts.LeoECS.Systems;
-using _project.Scripts.LeoECS.Systems.Input;
 using _project.Scripts.LeoECS.Systems.Player;
 using _project.Scripts.LeoECS.Systems.UI;
 using AB_Utility.FromSceneToEntityConverter;
@@ -32,12 +31,10 @@ namespace _project.Scripts.LeoECS
             _systems
                 .Add(new TimeSystem())
                 // ===== Init    
-                .Add(new InputInitSystem())
                 .Add(new PlayerInitSystem())
                 // ===== Groups    
                 .AddGroup(SharedData.GameplayGroupName, true, null,
                     // ===== Input
-                    new InputMouseSystem(),
                     new PlayerMoveInputSystem(),
                     // ===== Move    
                     new TargetFollowSystem(),
@@ -88,7 +85,10 @@ namespace _project.Scripts.LeoECS
 #endif
                 .ConvertScene()
                 .InjectUgui(_ecsUguiEmitter)
-                .Inject((ITimeService) new TimeService(), (IAudioPlayer) _audioPlayer)
+                .Inject(
+                    (ITimeService) new TimeService(),
+                    (IAudioPlayer) _audioPlayer,
+                    (IInputService) new InputService())
                 .Init();
         }
 
