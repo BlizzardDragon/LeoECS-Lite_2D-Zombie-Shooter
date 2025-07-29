@@ -102,9 +102,9 @@ namespace _project.Scripts.LeoECS
                 .ConvertScene()
                 .InjectUgui(_ecsUguiEmitter)
                 .Inject(
-                    (ITimeService) new TimeService(),
-                    (IAudioPlayer) _audioPlayer,
-                    (IInputService) new InputService()
+                    new InputService(),
+                    new TimeService(),
+                    _audioPlayer
                 )
                 .Inject(
                     itemSpawnFactory,

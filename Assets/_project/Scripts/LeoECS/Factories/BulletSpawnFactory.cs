@@ -46,7 +46,11 @@ namespace _project.Scripts.LeoECS.Factories
 
         private void Init(GameObject bulletGO, TeamType team, int moveDirection, BulletConfig bulletConfig)
         {
-            if (!bulletGO.TryGetComponent<EcsMonoObject>(out var ecsMonoObject)) return;
+            if (!bulletGO.TryGetComponent<EcsMonoObject>(out var ecsMonoObject))
+            {
+                Debug.LogError($"Component EcsMonoObject not found!");
+                return;
+            }
 
             var entity = _world.Value.NewEntity();
             ecsMonoObject.Init(entity, _world.Value);

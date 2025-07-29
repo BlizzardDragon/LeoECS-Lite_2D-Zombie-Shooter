@@ -32,19 +32,22 @@ namespace _project.Scripts.LeoECS.Factories
             itemGO.transform.SetParent(_shared.Value.ItemsContainer);
             itemGO.transform.position = position;
 
-            if (itemGO.TryGetComponent<EcsMonoObject>(out var ecsMonoObject))
+            if (!itemGO.TryGetComponent<EcsMonoObject>(out var ecsMonoObject))
             {
-                var itemEntity = _world.Value.NewEntity();
-                ecsMonoObject.Init(itemEntity, _world.Value);
-
-                _ecsMonoObjectPool.Value.Add(itemEntity).EcsMonoObject = ecsMonoObject;
-                _pickUpAudioPool.Value.Add(itemEntity).Clip = itemConfig.AudioClipPickUp;
-                _poolObjectTagPool.Value.Add(itemEntity);
-
-                ref var pickUpItemComponent = ref _pickUpItemPool.Value.Add(itemEntity);
-                pickUpItemComponent.ID = id;
-                pickUpItemComponent.Count = count;
+                Debug.LogError($"Component EcsMonoObject not found!");
+                return;
             }
+
+            var itemEntity = _world.Value.NewEntity();
+            ecsMonoObject.Init(itemEntity, _world.Value);
+
+            _ecsMonoObjectPool.Value.Add(itemEntity).EcsMonoObject = ecsMonoObject;
+            _pickUpAudioPool.Value.Add(itemEntity).Clip = itemConfig.AudioClipPickUp;
+            _poolObjectTagPool.Value.Add(itemEntity);
+
+            ref var pickUpItemComponent = ref _pickUpItemPool.Value.Add(itemEntity);
+            pickUpItemComponent.ID = id;
+            pickUpItemComponent.Count = count;
         }
     }
 }

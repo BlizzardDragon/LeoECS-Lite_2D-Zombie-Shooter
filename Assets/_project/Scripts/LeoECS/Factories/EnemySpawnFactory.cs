@@ -49,7 +49,11 @@ namespace _project.Scripts.LeoECS.Factories
 
         private void Init(GameObject enemyGO, Transform target, EnemyConfig enemyConfig)
         {
-            if (!enemyGO.TryGetComponent<EcsMonoObject>(out var ecsMonoObject)) return;
+            if (!enemyGO.TryGetComponent<EcsMonoObject>(out var ecsMonoObject))
+            {
+                Debug.LogError($"Component EcsMonoObject not found!");
+                return;
+            }
 
             var enemyEntity = _world.Value.NewEntity();
             ecsMonoObject.Init(enemyEntity, _world.Value);
