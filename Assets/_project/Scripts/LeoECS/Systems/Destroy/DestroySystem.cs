@@ -1,9 +1,9 @@
-using _project.Scripts.LeoECS.Components.Events;
+using _project.Scripts.LeoECS.Components.Destroy;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
 using UnityEngine;
 
-namespace _project.Scripts.LeoECS.Systems
+namespace _project.Scripts.LeoECS.Systems.Destroy
 {
     public class DestroySystem : IEcsRunSystem
     {

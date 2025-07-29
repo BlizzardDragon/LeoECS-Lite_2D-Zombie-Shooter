@@ -1,10 +1,9 @@
-using _project.Scripts.LeoECS.Components;
-using _project.Scripts.LeoECS.Components.Events;
+using _project.Scripts.LeoECS.Components.Destroy;
 using _project.Scripts.LeoECS.Services;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
 
-namespace _project.Scripts.LeoECS.Systems
+namespace _project.Scripts.LeoECS.Systems.Destroy
 {
     public class DestroyWithDelaySystem : IEcsRunSystem
     {

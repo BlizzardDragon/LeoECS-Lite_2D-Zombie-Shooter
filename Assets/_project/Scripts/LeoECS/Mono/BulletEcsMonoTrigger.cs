@@ -1,4 +1,6 @@
 using _project.Scripts.LeoECS.Components;
+using _project.Scripts.LeoECS.Components.Despawn;
+using _project.Scripts.LeoECS.Components.Destroy;
 using _project.Scripts.LeoECS.Components.Events;
 using Leopotam.EcsLite;
 
@@ -7,14 +9,14 @@ namespace _project.Scripts.LeoECS.Mono
     public class BulletEcsMonoTrigger : EcsMonoTrigger
     {
         private EcsPool<TeamComponent> _teamPool;
-        private EcsPool<DestroyEvent> _destroyPool;
+        private EcsPool<DespawnEvent> _despawnPool;
         private EcsPool<HealthComponent> _healthPool;
 
         protected override void OnInit()
         {
             base.OnInit();
             _teamPool = _world.GetPool<TeamComponent>();
-            _destroyPool = _world.GetPool<DestroyEvent>();
+            _despawnPool = _world.GetPool<DespawnEvent>();
             _healthPool = _world.GetPool<HealthComponent>();
         }
 
@@ -26,9 +28,9 @@ namespace _project.Scripts.LeoECS.Mono
             if (!_teamPool.Has(secondEntity)) return;
             if (_teamPool.Get(firstEntity).Team == _teamPool.Get(secondEntity).Team) return;
             if (!_healthPool.Has(secondEntity)) return;
-            if (_destroyPool.Has(firstEntity)) return;
+            if (_despawnPool.Has(firstEntity)) return;
 
-            _destroyPool.Add(firstEntity).GameObject = gameObject;
+            _despawnPool.Add(firstEntity).GameObject = gameObject;
         }
     }
 }

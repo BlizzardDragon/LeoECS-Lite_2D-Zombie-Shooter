@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace _project.Scripts.LeoECS.Components.Events
+namespace _project.Scripts.LeoECS.Components.Destroy
 {
     public struct DestroyEvent
     {

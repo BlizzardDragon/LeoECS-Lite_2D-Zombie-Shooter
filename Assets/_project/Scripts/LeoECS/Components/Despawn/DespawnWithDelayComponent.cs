@@ -1,8 +1,8 @@
 using UnityEngine;
 
-namespace _project.Scripts.LeoECS.Components
+namespace _project.Scripts.LeoECS.Components.Despawn
 {
-    public struct DestroyWithDelayComponent
+    public struct DespawnWithDelayComponent
     {
         public GameObject GameObject;
         public float StartTime;

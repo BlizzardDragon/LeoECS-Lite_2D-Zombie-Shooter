@@ -1,5 +1,7 @@
 using _project.Scripts.LeoECS.Components;
 using _project.Scripts.LeoECS.Components.Audio;
+using _project.Scripts.LeoECS.Components.Despawn;
+using _project.Scripts.LeoECS.Components.Destroy;
 using _project.Scripts.LeoECS.Components.Events;
 using _project.Scripts.LeoECS.Components.Tags;
 using _project.Scripts.LeoECS.Utils;
@@ -16,7 +18,7 @@ namespace _project.Scripts.LeoECS.Systems.Player
         private readonly EcsPoolInject<PlayerTag> _playerTagPool;
         private readonly EcsPoolInject<AmmoChangedEvent> _ammoChangedPool;
         private readonly EcsPoolInject<PickUpItemComponent> _pickUpItemPool;
-        private readonly EcsPoolInject<DestroyEvent> _destroyPool;
+        private readonly EcsPoolInject<DespawnEvent> _despawnPool;
         private readonly EcsPoolInject<EcsMonoObjectComponent> _ecsMonoObjectPool;
         private readonly EcsPoolInject<PickUpAudioComponent> _pickUpAudioPool;
         private readonly EcsPoolInject<AudioEvent> _audioPool;
@@ -73,8 +75,8 @@ namespace _project.Scripts.LeoECS.Systems.Player
         {
             if (!_ecsMonoObjectPool.Value.Has(itemEntity)) return;
 
-            var itemGameObject = _ecsMonoObjectPool.Value.Get(itemEntity).EcsMonoObject.gameObject;
-            _destroyPool.Value.Add(itemEntity).GameObject = itemGameObject;
+            var itemGO = _ecsMonoObjectPool.Value.Get(itemEntity).EcsMonoObject.gameObject;
+            _despawnPool.Value.Add(itemEntity).GameObject = itemGO;
         }
     }
 }

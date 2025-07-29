@@ -1,6 +1,9 @@
 using _project.Scripts.Configs;
 using _project.Scripts.LeoECS.Components;
+using _project.Scripts.LeoECS.Components.Despawn;
 using _project.Scripts.LeoECS.Components.Events;
+using _project.Scripts.LeoECS.Components.Tags;
+using _project.Scripts.LeoECS.Factories;
 using _project.Scripts.LeoECS.Mono;
 using _project.Scripts.LeoECS.Services;
 using Leopotam.EcsLite;
@@ -13,62 +16,22 @@ namespace _project.Scripts.LeoECS.Systems
     {
         private readonly EcsFilterInject<Inc<SpawnBulletEvent, MoveDirectionComponent, TeamComponent>> _spawnBulletPool;
 
-        private readonly EcsPoolInject<TransformComponent> _transformPool;
-        private readonly EcsPoolInject<DamageComponent> _damagePool;
-        private readonly EcsPoolInject<TeamComponent> _teamPool;
-        private readonly EcsPoolInject<DestroyWithDelayComponent> _destroyWithDelayPool;
-        private readonly EcsPoolInject<EcsMonoObjectComponent> _ecsMonoObjectPool;
-
-        private readonly EcsSharedInject<SharedData> _shared;
-        private readonly EcsCustomInject<ITimeService> _timeService;
-        private readonly EcsWorldInject _world;
+        private readonly EcsCustomInject<IBulletSpawnFactory> _bulletSpawnFactory;
 
         public void Run(IEcsSystems systems)
         {
             var entities = _spawnBulletPool.Value.GetRawEntities();
             var count = _spawnBulletPool.Value.GetEntitiesCount();
-            var bulletConfig = _shared.Value.BulletConfig;
 
             for (int i = 0; i < count; i++)
             {
                 var sourceEntity = entities[i];
                 var lastMoveDirection = _spawnBulletPool.Pools.Inc2.Get(sourceEntity).LastMoveDirection;
+                var spawnPosition = _spawnBulletPool.Pools.Inc1.Get(sourceEntity).ShootPointSource.position;
+                var team = _spawnBulletPool.Pools.Inc3.Get(sourceEntity).Team;
 
-                var bullet = SpawnBullet(sourceEntity, lastMoveDirection, bulletConfig);
-                Init(sourceEntity, bullet, bulletConfig, lastMoveDirection);
+                _bulletSpawnFactory.Value.Spawn(team, lastMoveDirection, spawnPosition);
             }
-        }
-
-        private EcsMonoObject SpawnBullet(int sourceEntity, int lastMoveDirection, BulletConfig bulletConfig)
-        {
-            var prefab = bulletConfig.Prefab;
-            var spawnPosition = _spawnBulletPool.Pools.Inc1.Get(sourceEntity).ShootPointSource.position;
-            var spawnContainer = _shared.Value.BulletContainer;
-
-            var bullet = Object.Instantiate(prefab, spawnPosition, Quaternion.identity, spawnContainer);
-
-            bullet.transform.localScale = new Vector3(lastMoveDirection, 1, 1);
-            return bullet;
-        }
-
-        private void Init(int sourceEntity, EcsMonoObject bullet, BulletConfig bulletConfig, int lastMoveDirection)
-        {
-            var entity = _world.Value.NewEntity();
-            bullet.Init(entity, _world.Value);
-
-            _ecsMonoObjectPool.Value.Add(entity).EcsMonoObject = bullet;
-            _teamPool.Value.Add(entity).Team = _spawnBulletPool.Pools.Inc3.Get(sourceEntity).Team;
-            _damagePool.Value.Add(entity).Damage = bulletConfig.Damage;
-            _transformPool.Value.Add(entity).Transform = bullet.transform;
-
-            ref var moveDirectionComponent = ref _spawnBulletPool.Pools.Inc2.Add(entity);
-            moveDirectionComponent.MoveSpeed = bulletConfig.MoveSpeed;
-            moveDirectionComponent.MoveDirection = lastMoveDirection;
-
-            ref var destroyWithDelayComponent = ref _destroyWithDelayPool.Value.Add(entity);
-            destroyWithDelayComponent.Delay = bulletConfig.DestroyDelay;
-            destroyWithDelayComponent.GameObject = bullet.gameObject;
-            destroyWithDelayComponent.StartTime = _timeService.Value.CurrentTime;
         }
     }
 }
