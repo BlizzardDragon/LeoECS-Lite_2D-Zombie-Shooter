@@ -52,8 +52,9 @@ namespace _project.Scripts.LeoECS
                     // ===== Move    
                     new TargetFollowSystem(),
                     new MoveDirectionSystem(),
+                    // ===== Shoot    
+                    new ShootSystem(),
                     // ===== Spawn    
-                    new AmmoSystem(),
                     new BulletSpawnSystem(),
                     new EnemySpawnSystem(),
                     // ===== Damage    
