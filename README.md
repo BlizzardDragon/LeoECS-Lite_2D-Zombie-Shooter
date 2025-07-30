@@ -1,122 +1,111 @@
-## Документация по проекту LeoECS-Lite_2D-Zombie-Shooter
+# Документация по проекту 2D-Платформера на LeoECS Lite
 
-### Общая информация
-Проект реализован в Unity с использованием LeoECS Lite и паттернов промышленной архитектуры. Прототип демонстрирует базовые механики платформера: управление игроком, стрельба, спавн врагов, столкновения, урон, смерть, UI-интерфейс и гейм-овер.
+## Общая информация
 
-### Архитектура проекта
-ECS (Entity Component System)
+Проект реализован в Unity с использованием LeoECS Lite и паттернов промышленной архитектуры.  
+Прототип демонстрирует базовые механики платформера: управление игроком, стрельба, спавн врагов, столкновения, урон, смерть, UI-интерфейс и гейм-овер.
+
+## Архитектура проекта
+
+### ECS (Entity Component System)
+
 Проект построен на LeoECS Lite. Основные сущности (игрок, враги, пули, предметы) описаны с помощью компонентов, а логика реализована в системах.
 
-### ECS Системы:
-* **Init-системы:**
+### ECS Системы
 
-  * `PlayerInitSystem`, `EnemySpawnFactory`, `ItemSpawnFactory`, `BulletSpawnFactory`
+#### Init-системы:
+- `PlayerInitSystem`
+- `EnemySpawnFactory`
+- `ItemSpawnFactory`
+- `BulletSpawnFactory`
 
-* **Группа GameplayGroup:**
+#### Группа GameplayGroup:
+- **Вход:** `PlayerMoveInputSystem`
+- **Движение:** `MoveDirectionSystem`, `TargetFollowSystem`
+- **Спавн:** `BulletSpawnSystem`, `EnemySpawnSystem`, `AmmoSystem`
+- **Урон и смерть:** `DamageSystem`, `DeathSystem`, `DespawnWithDelaySystem`, `DestroyWithDelaySystem`
+- **Предметы:** `ItemDropSystem`, `PlayerPickUpSystem`
+- **Анимации:** `AnimationSystem`, `MoveFlipAnimationSystem`
+- **UI и состояние:** `PlayerAmmoViewSystem`, `HealthBarSystem`, `PlayerAmmoGameOverSystem`, `PlayerHealthGameOverSystem`, `GameOverScreenSystem`
 
-  * Вход: `PlayerMoveInputSystem`
+#### Вне группы:
+- **UI события:** `ClickExitEventSystem`, `ClickRestartEventSystem`
+- **Аудио:** `AudioSystem`
+- **Очистка:** `DespawnSystem`, `DestroySystem`
+- **Удаление событий:** `DelHere<>()` — используется для событийных компонентов (`ShootAnimationEvent`, `TriggerEnterEntityEvent` и др.)
 
-  * Движение: `MoveDirectionSystem`, `TargetFollowSystem`
+## Фабрики и DI
 
-  * Спавн: `BulletSpawnSystem`, `EnemySpawnSystem`, `AmmoSystem`
+Использован паттерн **Factory**:
+- `ItemSpawnFactory`
+- `BulletSpawnFactory`
+- `EnemySpawnFactory`
 
-  * Урон и смерть: `DamageSystem`, `DeathSystem`, `DespawnWithDelaySystem`, `DestroyWithDelaySystem`
+Каждая фабрика инжектируется по интерфейсу — соблюдён принцип **инверсии зависимостей (D)**.
 
-  * Предметы: `ItemDropSystem`, `PlayerPickUpSystem`
+Фабрики внедряются в системы через `.Inject()`:
 
-  * Анимации: `AnimationSystem`, `MoveFlipAnimationSystem`
-
-  * UI и состояние: `PlayerAmmoViewSystem`, `HealthBarSystem`, `PlayerAmmoGameOverSystem`, `PlayerHealthGameOverSystem`, `GameOverScreenSystem`
-
-  * **Вне группы:**
-
-  * UI события: `ClickExitEventSystem`, `ClickRestartEventSystem`
-
-  * Аудио: `AudioSystem`
-
-  * Очистка: `DespawnSystem`, `DestroySystem`
-
-  * **Удаление событий:** `DelHere<>()` — используется для событийных компонентов (`ShootAnimationEvent`, `TriggerEnterEntityEvent`, и др.).
-
-### Фабрики и DI
-Использован паттерн Factory:
-
-`ItemSpawnFactory`, `IBulletSpawnFactory`, `IEnemySpawnFactory`
-
-Фабрики регистрируются через Inject():
-
-```
+```csharp
 .Inject(
   itemSpawnFactory,
   bulletSpawnFactory,
   enemySpawnFactory
 )
 ```
-Каждая реализует интерфейс (например, IItemSpawnFactory) для соблюдения инверсии зависимостей.
 
-Сервисы и инфраструктура
-SharedData — централизованное хранилище ссылок (пулы, контейнеры, префабы).
+## Сервисы и инфраструктура
 
-InputService — обёртка над Unity.Input, инжектится как IInputService.
+- `SharedData` — централизованное хранилище ссылок (например, конфиги, ссылки на важные префабы и каналы данных).
+- `InputService` — обёртка над `Unity.Input`, инжектируется как `IInputService`.
+- `TimeService` — предоставляет время как `ITimeService`.
+- `AudioPlayer` — реализует `IAudioPlayer` для проигрывания аудио.
+- UI события обрабатываются через `EcsUguiEmitter` и `.InjectUgui()`.
 
-TimeService — предоставляет время (Time.deltaTime) как ITimeService.
+## Пул объектов
 
-AudioPlayer — реализует интерфейс IAudioPlayer для проигрывания клипов.
+Для управления объектами используется ассет **Easy Pool Kit – Easiest Pool Manager for objects**.  
+Пули, враги и предметы создаются через фабрики, которые используют пул вместо обычного `Instantiate()` и `Destroy()`.
 
-UI Events — обрабатываются через EcsUguiEmitter и InjectUgui.
+## UI и взаимодействие
 
-Пул объектов
-Для всех объектов ECS (EcsMonoObject) реализован собственный пул:
+- Управление: `A/D` — движение, `Mouse0` — стрельба
+- UI: отображение патронов, здоровья, экран смерти
+- Перезапуск и выход — через кнопки UI (Ugui)
 
-MonoObjectPool<T>
+## Паттерны проектирования
 
-Унифицированный API:
+- **ECS (Data-Oriented Design)** — основа архитектуры
+- **Factory Method** — создание игровых объектов
+- **Dependency Injection** — внедрение зависимостей через `.Inject()`
+- **Object Pooling** — переиспользование объектов
+- **Service Locator** — частично используется через `SharedData`
+- **YAGNI-подход** — реализация только необходимых механик (например, анимации переключаются без событийной системы)
 
-csharp
-Копировать
-Редактировать
-pool.Spawn();
-pool.Despawn(obj);
-Пулы автоматически создаются для каждого типа по запросу, аналогично Easy Pool Kit.
+## Точка входа (Startup.cs)
 
-UI и взаимодействие
-Управление: A/D — движение, Mouse0 — стрельба
+Файл `Startup.cs` содержит:
+- создание мира и систем
+- регистрацию зависимостей
+- запуск фреймворка
 
-UI: отображение патронов, здоровья, экран смерти
-
-Перезапуск и выход — через кнопки UI (Ugui)
-
-Паттерны проектирования
-ECS (Data-Oriented Design)
-
-Factory Method — для создания игровых объектов
-
-Dependency Injection — для сервисов и фабрик
-
-Object Pooling — переиспользование объектов
-
-Service Locator (в рамках SharedData)
-
-Точка входа (Startup.cs)
-Файл Startup.cs содержит создание мира, регистрацию всех систем, инъекцию зависимостей и обновление фреймворка.
-
-Ключевые строки:
-
-csharp
-Копировать
-Редактировать
+Пример:
+```csharp
 _world = new EcsWorld();
 _systems = new EcsSystems(_world, _sharedData)
-  .Add(...) // системы
-  .Inject(...) // сервисы и фабрики
+  .Add(...)       // системы
+  .Inject(...)    // сервисы и фабрики
   .Init();
-Сцена и запуск
-Сцена: MainScene.unity
+```
 
-Начало игры — автоматически при запуске сцены
+## Сцена и запуск
 
-Игра завершается при:
+- Сцена: `MainScene.unity`
+- Игра начинается автоматически при запуске сцены
+- Игра завершается при:
+  - столкновении с врагом
+  - исчерпании патронов
 
-Столкновении с врагом
+## Затраченное время
 
-Исчерпании патронов
+Реализация выполнена в течение **X часов**  
+(фактическое время зафиксировано на видео, прилагается отдельно).
