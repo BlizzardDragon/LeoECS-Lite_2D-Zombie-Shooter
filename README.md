@@ -20,7 +20,7 @@
 - `BulletSpawnFactory`
 
 #### Группа GameplayGroup:
-- **Вход:** `PlayerMoveInputSystem`
+- **Ввод:** `PlayerMoveInputSystem`
 - **Движение:** `MoveDirectionSystem`, `TargetFollowSystem`
 - **Стрельба:** `ShootSystem`
 - **Спавн:** `BulletSpawnSystem`, `EnemySpawnSystem`
