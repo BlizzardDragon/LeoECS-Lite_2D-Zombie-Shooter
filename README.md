@@ -22,7 +22,8 @@
 #### Группа GameplayGroup:
 - **Вход:** `PlayerMoveInputSystem`
 - **Движение:** `MoveDirectionSystem`, `TargetFollowSystem`
-- **Спавн:** `BulletSpawnSystem`, `EnemySpawnSystem`, `AmmoSystem`
+- **Стрельба:** `ShootSystem`
+- **Спавн:** `BulletSpawnSystem`, `EnemySpawnSystem`
 - **Урон и смерть:** `DamageSystem`, `DeathSystem`, `DespawnWithDelaySystem`, `DestroyWithDelaySystem`
 - **Предметы:** `ItemDropSystem`, `PlayerPickUpSystem`
 - **Анимации:** `AnimationSystem`, `MoveFlipAnimationSystem`
@@ -107,7 +108,14 @@ _systems = new EcsSystems(_world, _sharedData)
 
 ## Затраченное время
 
-Реализация выполнена в течение **12 часов**
-Рефакторинг **1 час 30 минут**
+Реализация выполнена в течение **12 часов**\
+Рефакторинг **1 час 30 минут**\
 Документация **1 час**
-(фактическое время зафиксировано на видео, прилагается отдельно).
+
+Фактическое время зафиксировано на видео:\
+[Реализация](https://youtu.be/84MfcBmBtok)\
+[Рефакторинг](https://youtu.be/uMtI9CPJkfI)
+
+## Скриншоты
+<img src="Assets\_project\2D\Screenshots\Screenshot-1.jpg" width="300">
+<img src="Assets\_project\2D\Screenshots\Screenshot-2.jpg" width="300">
