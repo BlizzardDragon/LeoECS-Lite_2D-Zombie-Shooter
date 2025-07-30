@@ -16,3 +16,4 @@ MonoBehaviour:
   <StartHealth>k__BackingField: 1
   <MoveSpeed>k__BackingField: 15
   <StartAmmoCount>k__BackingField: 50
+  <ReloadDuration>k__BackingField: 0.1
