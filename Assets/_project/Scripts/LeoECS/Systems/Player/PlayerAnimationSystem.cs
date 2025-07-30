@@ -6,9 +6,9 @@ using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
 using UnityEngine;
 
-namespace _project.Scripts.LeoECS.Systems
+namespace _project.Scripts.LeoECS.Systems.Player
 {
-    public class AnimationSystem : IEcsRunSystem
+    public class PlayerAnimationSystem : IEcsRunSystem
     {
         private readonly int _animationHash = Animator.StringToHash("Animation");
 

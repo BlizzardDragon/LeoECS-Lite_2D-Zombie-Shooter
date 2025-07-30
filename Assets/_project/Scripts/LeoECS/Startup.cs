@@ -70,7 +70,7 @@ namespace _project.Scripts.LeoECS
                     new PlayerHealthGameOverSystem(),
                     // ===== Animations    
                     new MoveFlipAnimationSystem(),
-                    new AnimationSystem(),
+                    new PlayerAnimationSystem(),
                     // ===== View
                     new HealthBarSystem(),
                     // ===== UI

@@ -26,7 +26,7 @@
 - **Спавн:** `BulletSpawnSystem`, `EnemySpawnSystem`
 - **Урон и смерть:** `DamageSystem`, `DeathSystem`, `DespawnWithDelaySystem`, `DestroyWithDelaySystem`
 - **Предметы:** `ItemDropSystem`, `PlayerPickUpSystem`
-- **Анимации:** `AnimationSystem`, `MoveFlipAnimationSystem`
+- **Анимации:** `PlayerAnimationSystem`, `MoveFlipAnimationSystem`
 - **UI и состояние:** `PlayerAmmoViewSystem`, `HealthBarSystem`, `PlayerAmmoGameOverSystem`, `PlayerHealthGameOverSystem`, `GameOverScreenSystem`
 
 #### Вне группы:
